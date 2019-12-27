@@ -1,0 +1,968 @@
+%  LaTeX support: latex@mdpi.com
+%  In case you need support, please attach all files that are necessary for compiling as well as the log file, and specify the details of your LaTeX setup (which operating system and LaTeX version / tools you are using).
+
+% You need to save the "mdpi.cls" and "mdpi.bst" files into the same folder as this template file.
+
+%=================================================================
+\documentclass[remote sensing,article,submit,moreauthors,pdftex,10pt,a4paper]{mdpi}
+
+%% Some pieces required from the pandoc template
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{4pt}}
+\setlist[itemize]{leftmargin=*,labelsep=5.8mm}
+\setlist[enumerate]{leftmargin=*,labelsep=4.9mm}
+
+\usepackage{longtable}
+
+% see https://stackoverflow.com/a/47122900
+
+%
+%--------------------
+% Class Options:
+%--------------------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% actuators, addictions, admsci, aerospace, agriculture, agronomy, algorithms, animals, antibiotics, antibodies, antioxidants, applsci, arts, asi, atmosphere, atoms, axioms, batteries, bdcc, behavsci, beverages, bioengineering, biology, biomedicines, biomimetics, biomolecules, biosensors, brainsci, buildings, carbon, cancers, catalysts, cells, ceramics, challenges, chemengineering, chemosensors, children, chromatography, climate, coatings, colloids, computation, computers, condensedmatter, cosmetics, cryptography, crystals, cybersecurity, data, dentistry, designs, diagnostics, diseases, diversity, econometrics, economies, education, electrochemistry, electronics, energies, entropy, environments, epigenomes, est, fermentation, fibers, fire, fishes, fluids, foods, forests, fractalfract, futureinternet, galaxies, games, gastrointestdisord, gels, genealogy, genes, geosciences, geriatrics, hazardousmatters, healthcare, heritage, highthroughput, horticulturae, humanities, hydrology, informatics, information, infrastructures, inorganics, insects, instruments, ijerph, ijfs, ijms, ijgi, ijtpp, inventions, j, jcdd, jcm, jcs, jdb, jfb, jfmk, jimaging, jof, jintelligence, jlpea, jmmp, jmse, jpm, jrfm, jsan, land, languages, laws, life, literature, logistics, lubricants, machines, magnetochemistry, make, marinedrugs, materials, mathematics, mca, mti, medsci, medicines, membranes, metabolites, metals, microarrays, micromachines, microorganisms, minerals, modelling, molbank, molecules, mps, nanomaterials, ncrna, neonatalscreening, neuroglia, nitrogen, nutrients, ohbm, particles, pathogens, pharmaceuticals, pharmaceutics, pharmacy, philosophies, photonics, plants, plasma, polymers, polysaccharides, preprints, proceedings, processes, proteomes, publications, quaternary, qubs, recycling, religions, remotesensing, reports, resources, risks, robotics, safety, scipharm, sensors, separations, sexes, sinusitis, socsci, societies, soils, sports, standards, stats, surgeries, sustainability, symmetry, systems, technologies, toxics, toxins, tropicalmed, universe, urbansci, vaccines, vetsci, vibration, viruses, vision, water, wem
+%---------
+% article
+%---------
+% The default type of manuscript is article, but can be replaced by:
+% abstract, addendum, article, benchmark, book, bookreview, briefreport, casereport, changes, comment, commentary, communication, conceptpaper, correction, conferenceproceedings, conferencereport, expressionofconcern, meetingreport, creative, datadescriptor, discussion, editorial, essay, erratum, hypothesis, interestingimages, letter, meetingreport, newbookreceived, opinion, obituary, projectreport, reply, reprint, retraction, review, perspective, protocol, shortnote, supfile, technicalnote, viewpoint
+% supfile = supplementary materials
+% protocol: If you are preparing a "Protocol" paper, please refer to http://www.mdpi.com/journal/mps/instructions for details on its expected structure and content.
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g. the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+
+%=================================================================
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\articlenumber{x}
+\doinum{10.3390/------}
+\pubvolume{xx}
+\pubyear{2018}
+\copyrightyear{2018}
+\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, calc, indentfirst, fancyhdr, graphicx, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, amsthm, hyphenat, natbib, hyperref, footmisc, geometry, caption, url, mdframed, tabto, soul, multirow, microtype, tikz
+
+%=================================================================
+%% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Historical aerial surveys map long-term changes of forest cover and
+structure in the central Congo Basin}
+
+% Authors, for the paper (add full first names)
+\Author{Koen Hufkens$^{1,2,*}$\href{https://orcid.org/0000-0002-5070-8109}{\orcidicon}, Thalès de Haulleville$^{3}$, Elizabeth Kearsley$^{1}$, Kim Jacobsen$^{2,3}$, Hans Beeckman$^{3}$, Piet Stoffelen$^{4}$, Filip Vandelook$^{4}$, Sofie Meeus$^{4}$, Michael Amara$^{5}$, Leen Van Hirtum$^{5}$, Jan Van den Bulcke$^{1}$, Hans Verbeeck$^{1}$, Lisa Wingate$^{2}$}
+
+% Authors, for metadata in PDF
+\AuthorNames{Koen Hufkens, Thalès de Haulleville, Elizabeth Kearsley, Kim Jacobsen, Hans Beeckman, Piet Stoffelen, Filip Vandelook, Sofie Meeus, Michael Amara, Leen Van Hirtum, Jan Van den Bulcke, Hans Verbeeck, Lisa Wingate}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Ghent University, Ghent, Belgium; \\
+$^{2}$ \quad INRA, UMR ISPA, Villenave d'Ornon, France; \\
+$^{3}$ \quad Royal Museum for Central Africa, Tervuren, Belgium; \\
+$^{4}$ \quad Botanic Garden Meise, Meise, Belgium; \\
+$^{5}$ \quad National Archives of Belgium, Brussels, Belgium; \\
+}
+% Contact information of the corresponding author
+\corres{Correspondence: \href{mailto:koen.hufkens@gmail.com}{\nolinkurl{koen.hufkens@gmail.com}}}
+
+% Current address and/or shared authorship
+
+
+
+
+
+
+
+
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+% Simple summary
+
+% Abstract (Do not insert blank lines, i.e. \\)
+\abstract{Land Use and Land Cover change (LULCC) of African rainforest contribute
+to global carbon emissions. Yet, most historical estimates of LULCC and
+their carbon emissions rely on non-spatially explicity data in the
+pre-satellite era (\textless{} 1972). Past studies have expanded this
+pre-satellite time frame with declassified satellite surveillance data
+or aerial surveys, but none cover the Congo Basin. Here, we use
+historical aerial survey photos to map the extent and structure of LULCC
+around Yangambi, central Congo Basin, in 1958. Our study leveraged
+Structure-from-Motion to generate a large orthomosaic covering 828
+km\textsuperscript{2}, counting 733 million pixels, at a sub meter
+resolution and geo-referenced to \textasciitilde{}4.7 \(\pm\) 4.3 m.
+Primary forest in the orthomosaic was classified with a Convoluted
+Neural Network Deep Learning approach. We used these data to quantify
+LULCC, landscape and canopy complexity and scale above ground biomass
+between historical and contemporary condition. We show a shift from
+historical highly structured industrial deforestation in 1958 (162
+km\textsuperscript{2}), to contemporary smallholder farming clearing (88
+km\textsuperscript{2}), increasing landscape fragmentation and forest
+edges. Efforts to quantify canopy texture and their link to carbon
+storage had limited to no success. Our analysis provides an insight in
+key spatial and temporal patterns of deforestation and reforestation at
+a multi-decadal scale and provide a historical context to land-cover and
+land-use change spatial patterns for past and ongoing field research in
+the area.}
+
+% Keywords
+\keyword{Aerial survey, data recovery, CNN, Deep Learning, SfM, Congo Basin}
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences:
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data:
+%\dataset{DOI number or link to the deposited data set in cases where the data set is published or set to be published separately. If the data set is submitted and will be published as a supplement to this paper in the journal Data, this field will be filled by the editors of the journal. In this case, please make sure to submit the data set as a supplement when entering your manuscript into our manuscript editorial system.}
+
+%\datasetlicense{license under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%\setcounter{secnumdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{wrapfig} \usepackage{graphics} \usepackage{setspace}
+
+\doublespacing 
+
+\usepackage{gensymb} \usepackage{booktabs}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only for the journal Gels: Please place the Experimental Section after the Conclusions
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+The functioning of a tropical forest, and its capacity to sequester
+carbon, is heavily influenced by anthropogenic disturbances such as
+selective logging, clear felling, or slash and burn practices, all
+increasing forest fragmentation. This increased pace in the loss of
+rainforest cover \citep{butsic2015} is predicted to negatively impact
+the function of these tropical forests, and their future capacity to
+sequester carbon, as anthropogenic disturbances such as selective
+logging, clear felling, or slash and burn practices collectively
+contribute to increasing forest fragmentation.
+
+These forest fragments and their edges contain fewer large trees
+\citep{laurance2000}, in part due to their hotter and brighter
+microclimates \citep{magnago2015}. Similarly, species composition and
+biodiversity \citep{poorter2006} are negatively affected. Spatial
+disturbances also have an explicit temporal component, where the time
+since disturbance affects the strength of the effects
+\citep{didham1999}. Deforestation and gap formation also influence the
+overall canopy structure, where pioneer species grow taller and with
+narrower crowns \citep{poorter2006, peres2006} affecting the forest
+light regime and carbon dynamics \citep{stark2012}. As such,
+anthropogenic factors through land-use and land cover change (LULCC)
+heavily affect forest structure and functioning
+\citep{fauset2017, brinck2017, didham1999}. In the tropics the majority
+of emissions originate from deforestation and forest degradation
+\citep{hansen2013, houghton2012, tyukavina2015} contributing to 10-15\%
+of the total global emissions \citep{vanderwerf2009} and concomitant
+losses in biodiversity losses \citep{barlow2016, vandeperre2018} and how
+LULCC is evolving over time. Although the African rainforest is the
+second largest on Earth and covers \textasciitilde{}630 million ha,
+representing up to 66 Pg of carbon storage \citep{Lewis2009b}, and
+currently loses forest at an increasing pace \citep{butsic2015}. Yet,
+the tropics is now becoming a large source of CO\_2 to the atmosphere as
+deforestation and forest degradation
+\citep{hansen2013, houghton2012, tyukavina2015} contribute up to 10-15\%
+of the total global CO2 emissions \citep{vanderwerf2009}. Furthermore,
+recent estimates show that 31\% of recent carbon emissions are caused by
+edge effects alone \citep{brinck2017}. In this context, there are very
+few long term forest inventory plots that presently exist in the central
+Congo Basin \citep{Verbeeck2011a, lewis2013}. This further limits the
+accuracy of current biomass estimates and challenges our understanding
+of how forest structure and function changes in the short and long term
+in these ecosystems \citep{Kearsley2013, Doetterl2015}.
+
+Historical estimates of LULCC, and their carbon emissions, exist
+\citep{houghton2012, ramankutty1999, defries2002, sader1988}, however
+they generally rely on non-spatially explicit data in the pre-satellite
+era (\textless{} 1972) \citep{houghton2010}. These analysis often use
+FAO statistics, historical land-use sources, and/or population and
+socio-economic data \citep{houghton2012}, as limited earlier spatial
+data sources are available \citep{hansen2013, achard2014}. For example,
+the \citet{houghton2010} long-term study used FAO and national censuses
+alongside a bookkeeping model to estimate carbon emissions from LULCC.
+Other studies use remote sensing data, but are limited in time to recent
+decades \citep{defries2002, houghton2012}. These proxy based studies
+have a limited view on long-term direct and indirect spatial effects of
+deforestation. As such, both the spatial structure and the fragmentation
+pattern of a forest combined with its life history has a profound effect
+on carbon emssisions. However, in this context remote sensing
+assessments provide more accurate spatial information to help estimate
+carbon emissions \citep{mitchard2018}.
+
+Past studies expanded knowledge during the pre-satellite time frame
+through the use of now declassified satellite surveillance data to map
+deforestation in the US, central Brazil, and post world war II Germany
+\citep{song2015, nita2018}. In some cases these records could extend
+back in time even further using historical aerial survey images. In
+northern Europe especially these data are well known and used, for
+example to map the extent of forest cover across \textasciitilde{}100
+km\textsuperscript{2} regularly, and at times using automated workflows
+\citep{giordano2018}. Survey data across the African continent is less
+common or inaccessible or both. Some studies do exist, both
+\citet{buitenwerf2012} and \citet{okeke2006} used aerial survey images
+to map vegetation changes in South African savannas and the Adulam
+Nature Reserve, respectively. Whilst \citet{frankl2015} used 20 aerial
+survey images to map the Ethiopian highlands of 1935. High resolution
+aerial or surveillance satellite images provide scientists tools to
+monitor forest extent and structure over long time frames. Moreover,
+canopy texture from aerial survey images has been successfully linked to
+above ground biomass \citep{Ploton2012, Couteron2005, Barbier2010}. Thus
+using texture based metrics obtained from (high resolution) remote
+sensing data opens up possibilities to link historical aerial footage to
+carbon density across large spatial extents \citep{Couteron2005}.
+
+Given the impact of LULCC on the structure and functioning of tropical
+forests, and their influence on both carbon dynamics
+\citep{Kearsley2013} and biodiversity \citep{vandeperre2018}, accurate
+long term reporting of historical forest cover in the pre-satellite era
+is an imperative \citep{willcock2016}. In this study we use a
+combination of historical aerial photography and contemporary remote
+sensing data to map long-term changes in the extent and structure of the
+tropical forest surrounding Yangambi, in the central Congo Basin at the
+beginning of 1958 and the start of the antrophocene \citep{lewis2015}.
+Our analysis provides a historical insight into important LULCC spatial
+patterns in Yangambi, such as fragmentation and edge complexity. Our
+analysis further contextualises the influence of changes in the forest's
+life history on past and current research into Above Ground Carbon (AGC)
+storage \citep{Kearsley2013} and biodiversity \citep{vandeperre2018} in
+the central Congo Basin.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{historical-data-acquisition}{%
+\subsection{Historical data
+acquisition}\label{historical-data-acquisition}}
+
+Data for the central Congo Basin region, surrounding Kisangani, were
+collected in several flights during the dry season of 1958 and 1959
+(from 8/01/1958 to 20/02/1958 and from 28/12/1958 to 9/01/1959
+respectively, see Appendix Figure 1) to generate topographic maps of the
+area, supervised by the ``Institut Géographique du Congo Belge'' in
+Kinshasa (then Léopoldville). Black-and-White infrared images (0.4 - 0.9
+\(\mu\)m) were gathered along flight paths running mostly from west to
+east, between 9 - 11h local time. Along a flight path continuous images
+were taken using a Wild Heerburgg RC5a (currently Leica Geosystems) with
+an Aviogon lens assembly (114.83mm / f 5.6, with a 90\degree view angle)
+resulting in square photo negative of 180 by 180 mm. Flights were flown
+at an average absolute altitude of \textasciitilde{}5200 m above sea
+level, covering roughly 18 530 km\textsuperscript{2} at an approximate
+scale of 1/40 000. The use of the integrated autograph system ensured
+timely acquisition of pictures with a precise overlap
+(\textasciitilde{}1/3) between images. This large overlap between images
+together with flight parameters would allow post-processing, using
+stereographs, to create accurate topographic maps. Original data from
+this campaign are stored in the
+\href{https://www.africamuseum.be/en}{Royal Museum for Central Africa}
+in Tervuren, Belgium (Figure 1).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/print_examples} \caption{A box of historical aerial photographs (left) and a single aerial photograph (right) showing part of the Congo river. Note the meta-data provided in the margins of the image such as acquisition time and fleight height and the solar glare on the Congo river.}\label{fig:unnamed-chunk-1}
+\end{figure}
+
+\hypertarget{site-selection}{%
+\subsection{Site selection}\label{site-selection}}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/flight_paths} \caption{Overview of the historical flight paths during aerial photo acquisition and ancillary data used in this study. The bounding box of the orthomosaic data presented in this study is shown as a rectangle (23x36 km). The outline of a recent high-resolution Geo-eye panchromatic image is shown as a dashed dark grey rectangle (10x10km). The location of various permanent sampling plots are shown as x, +, and open squares and triangles for the mixed, mono-dominant and edge plots respectively. The grey polygon delineates the current day Yangambi Man and Biosphere reserve. The inset, top right, situates the greater Yangabmi region with the DR Congo. The full flight plan and details are shown in Appendix Figure 1 and 2}\label{fig:unnamed-chunk-2}
+\end{figure}
+
+We prioritised flight paths and images that contained current day
+permanent sampling plots, larger protected areas, and past agricultural
+and forest research facilities (Figure 2). This selection provides a
+comprehensive mapping of the Yangambi area and the life history of the
+forest surrounding it. Thereafter, we selected flight paths 1 through 11
+for digitization. From this larger dataset of 334 images we selected 74
+survey images for orthomosaic compositing and further analysis. All the
+selected images stem from the flight campaign made during January and
+February of 1958. The area includes the Yangambi village, 20
+contemporary permanent sampling plots \citep{Kearsley2013}, past and
+present agricultural experimental plots \citep{bauters2015} and large
+sections of the Yangambi
+\href{http://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/africa/democratic-republic-of-the-congo/yangambi/}{UNESCO
+Man and Biosphere reserve} surrounding to the west and east of the
+village. Although not formally mosaicked we provided a full dataset of
+pre-processed images using the cropping and normalization routines
+described below. The latter data was not used in subsequent LULCC
+analysis, but has been archived and made available to the public
+separately (see code \& data availability statement below).
+
+\hypertarget{digitization-and-data-processing}{%
+\subsection{Digitization and data
+processing}\label{digitization-and-data-processing}}
+
+All selected images, covering the Yangambi area, were contact prints as
+original negatives of the prints were not available. Images were scanned
+at a resolution exceeding their original resolution (or grain) at the
+maximal physical resolution of an Epson A3 flatbed scanner (i.e.~2400
+dpi or 160MP per image) and saved as lossless tiff images. Data were
+normalized using contrast limited histogram equalization
+\citep{zuiderveld1994} with a window size of 32 and a clip limit of 1.5.
+Fiduciary marks were used to rectify and downsample the images into
+square 7700x7700 pixel images (\textasciitilde{}1200 dpi, 81MP). This
+resulted in a dataset with digital images at a resolution that remained
+above the visible grain of the photographs, whilst the reduced image
+size facilitated easier file handling and processing speed.
+
+Data was processed into a georeferenced orthomosaic using a Structure
+from motion (SfM, \citet{ullman1979}) approach implemented in
+\href{http://www.agisoft.com}{Agisoft Metashape} version 1.5.2 (Agisoft
+LLC, St.~Petersburg, Russia). An orthomosaic corrects remote sensing
+data to represent a perfectly downward looking image, free from
+perspective distortions due to topography and camera tilt. Using the SfM
+technique features, areas in images with a large degree of similarity,
+are matched across various images to reconstruct a three dimensional
+scene (topography) from two-dimensional image sequences. During the SfM
+analysis we masked clouds, glare or large water bodies such as the Congo
+river.
+
+We calculated the orthomosaic using a low resolution point cloud and
+digital elevation map (DEM). Additional ground control points were
+provided to assist in the referencing of image and constrain the
+optimization routine used in the SfM algorithm. Ground control points
+consisted of rooftop edges of permanent structures which could be
+verified in both old and new aerial imagery (i.e.~ESRI World Imagery).
+Although clouds were removed during the SfM routine we did not mask all
+clouds in the final orthomosaic to maximize forest coverage. The final
+scene was cropped, to provide consistent wall to wall coverage of the
+reconstructed scene. The orthomosaic was exported as a geotiff for
+further georeferencing in QGIS \citep{qgisdevelopmentteam2018} using the
+georeferencer plugin (version 3.1.9) and additional ESRI World Imagery
+high resolution reference data. We used 3\textsuperscript{th} degree
+polynomial and 16 ground control points to correct the final image.
+Ground control points, raw image data and final processed image are
+provided in addition to measures of uncertainty such as mean root mean
+squared (RMSE), mean and median error across all ground control points.
+All subsequent analysis are executed on the final geo-referenced
+orthomosaic or subsets of it.
+
+\hypertarget{land-use-and-land-cover-change}{%
+\subsection{Land-Use and Land-Cover
+Change}\label{land-use-and-land-cover-change}}
+
+\hypertarget{classifying-forest-cover}{%
+\subsubsection{Classifying forest
+cover}\label{classifying-forest-cover}}
+
+We automatically delineated all natural forest in the historical data,
+thus excluding tree plantations, thinned or deteriorated forest stands,
+fields and buildings. We used the Unet Convoluted Neural Net (CNN,
+\citet{ronneberger2015}) architecture implemented in Keras
+\citep{chollet2015} with an efficientnetb3 backbone
+\citep{yakubovskiy2019} running on TensorFlow \citep{martinabadi2015} to
+train a binary classifier (i.e.~forest or non-forested). This
+methodology is increasingly being used to automate pixel-level
+classification in (color) digital photography data \citep{buscombe2018}.
+Training data were collected from the orthomosaic by randomly selecting
+513 pixel square tiles from homogeneous forested or non-forested areas
+within the historical orthomosaic. Homogeneous tiles were combined in
+synthetic landscapes using a random gaussian field based binary mask
+(Figure 3). We generated 5000 synthetic landscapes for training, while
+500 landscapes were generated for both the validation and the testing
+dataset. Source tiles did not repeat across datasets to limit
+overfitting. In order to limit stitch line misclassifications, along the
+seams of mosaicked images, we created synthetic landscapes with
+different forest tiles to mimick forest texture transitions. We applied
+this technique to 10\% of the generated synthetic landscapes. The CNN
+model was trained for 100 epochs on a graphics processing unit (GPU)
+maximizing the Intersect-over-Union (IoU) using additional data
+augmentation. Data augmentation included random cropping to 320 pixel
+squares, random orientation, scaling, perspective, contrast and
+brightness shifts and image blurring. During final model evaluation we
+report the IoU of our out-of-sample test datasets. The optimized model
+was used to classify the complete orthomosaic using a moving window
+approach with a step size of 110 pixels and a majority vote across
+overlapping areas to limit segmentation edge effects. We refer to Figure
+4 for a synoptic overview of the full deep learning learning workflow.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/synthetic_landscape} \caption{An example synthetic landscape, combining homogeneous forest and non-forest images into a patchy landscape using random gaussian field based masks. The left panel shows a combined synthetic landscape, while the right panel shows the corresponding forest (black) and non-forest (white) labels.}\label{fig:unnamed-chunk-3}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/cnn_diagram} \caption{A diagram of the deep learning workflow followed in training a binary forest / non-forest cover convolutional neural net U-Net model to generate our forest cover map.}\label{fig:unnamed-chunk-4}
+\end{figure}
+
+To map long term land-use and land-cover change in the Yangambi region
+we used the contemporary Global Forest Change version 1.6 data (GFC,
+tile 10N-020E) \citep{hansen2013}. Using this data we calculated the
+latest state of the forest with respect to the conditions at the start
+of 1958, 60 years earlier. In our analysis we only included forested
+pixels which recorded no loss throughout the whole 2000 - 2018 period.
+As the resolution of the historical forest classification exceeds that
+of the GFC map we downsampled our historical forest cover data to 30m
+GFC resolution. We masked out all water bodies using the Global Forest
+Change survey data mask layer, and limited the analysis to the right
+bank of the Congo river. Where the datasets overlap we provide summary
+statistics of deforestation, reforestation and afforestation.
+
+\hypertarget{landscape-fragmentation-above-ground-carbon-estimates}{%
+\subsubsection{Landscape fragmentation \& Above Ground Carbon
+estimates}\label{landscape-fragmentation-above-ground-carbon-estimates}}
+
+To quantify changes in the structure of forest cover and its
+disturbances we used spatial pattern analysis landscape fragmentation
+metrics \citep{dale1999}. We report the ratio of edge to area and the
+fractal index to quantify landscape complexity of forest disturbances.
+Statistics were calculated for all forest disturbance patches larger
+than 1 ha using the R package landscapemetrics \citep{hesselbarth2019}.
+We provide mean and standard deviation on edge, area, their ratio and
+fractal dimension for both the historical and contemporary
+\citet{hansen2013} forest cover maps.
+
+We estimated above ground carbon (AGC) losses and gains over time using
+plot based averages of recent inventory data at permanent sampling plots
+in the area (Figure 2). We refer to \citet{Kearsley2013} for the survey
+method and allometric relations used to scale the survey data. Unlike
+standard square 1 ha plots edge plots were set back 200m from forest
+edges and were 50x200m, with the 50m side of the plot along the forest
+edge and continuing 200m into the forest (Appendix Table 1). We further
+confirmed that forest edge plots did not show a significantly different
+AGC compared to those of non-edged / mixed forest plots (Mann Whitney U
+test, p \textless{} 0.05). Thus it was not necessary to explicitly
+quantify changes in AGC caused by edge effects. Moreover, we used the
+mean values of the mixed forest as representative for potential AGC
+losses. Despite the challenges inherent in quantifying AGC for forest
+edges we mapped the total extent of the edges in the contemporary
+landscape. To align our landscape analysis with exploratory analysis of
+the survey data we used a buffer of 200m to estimate the extent of
+forest edges and patches, up to the location of forest edge plots.
+
+Surveys of old plantations show a large variation in AGC, depending on
+age and the crop type. For example, the AGC values varied from 168.67 to
+86.55 g Mg C ha\textsuperscript{-1}, for \emph{Hevea brasiliensis}
+(rubber tree) and \emph{Elaeis guineensis} (oil palm) plots respectively
+(\citet{bustillo2018}, personal communications). These higher values are
+in line with the mixed AGC estimates in the area, while the palm
+plantations resemble old-regrowth values (81.8 Mg C
+ha\textsuperscript{-1}, see Table A1). We therefore use both the
+estimates of old-regrowth and mixed forest to estimate AGC for regrowth.
+We did not have sufficient data to account for individual changes in AGC
+across plantations.
+
+\hypertarget{canopy-structure-foto-texture-analysis}{%
+\subsection{Canopy structure \& FOTO texture
+analysis}\label{canopy-structure-foto-texture-analysis}}
+
+We compared the structure of the canopy both visually and using Fourier
+Transform Textural Ordination (FOTO, \citet{couteron2002}). Fourier
+Transform Textural Ordination uses a principal component analysis (PCA)
+on radially averaged 2D Fourier spectra to characterize canopy (image)
+texture. The FOTO technique was first described by \citet{couteron2002}
+to quantify canopy stucture in relation to biomass and biodiversity, and
+can be used across multiple scenes using normalization
+\citep{Barbier2010}.
+
+We used an area of 400x400m (16 ha) around contemporary permanent
+sampling plot locations to quantify the general state of the canopy in
+both historical and contemporary remote sensing data. Contemporary data
+were resampled to the resolution of the historical data using a nearest
+neighbour interpolation for comparison. We used the first acquisition of
+a pan-chromatic Geo-Eye 1 stereo pair (GeoEye, 2012, Thornton, Colorado,
+U.S.A., order 737537, 2011-11-11 8:55h GMT or 9:55h local time). For
+permanent sampling plot locations in both historical and contemporary
+data a rectangular buffer of 200m around the centre of all plots was
+used to create small image subsets. All image subsets were processed
+using the R based FOTO implementation and package \citep{hufkens2019a}
+using global normalization, ensuring intercomparability of texture
+metrics across time and space \citep{Barbier2010}. We used a FOTO
+(moving) window size of 187 pixels (or \textasciitilde{}150m), as
+described in \citet{solorzano2018} and \citet{Barbier2010}, to ensure
+that multiple individual canopies could be included in the analysis. A
+buffer with a radius of 50m around the center of all permanent sampling
+plots was used to determine the average value of the first principle
+component (PC), explaining the majority of the variance in canopy
+texture. Where both the Geo-Eye data and the orthomosaic image
+overlapped we processed the intersecting region to explore a
+wall-to-wall comparison between past and current canopy texture metrics.
+
+We used the standard FOTO methodology with fixed zones, instead of the
+moving window approach. The window size was set to the same size (187
+pixels or \textasciitilde{}150m) as used in the moving window analysis
+above. To account for illumination differences between the two scenes we
+applied histogram matching. No global normalization was applied, as the
+scene was processed as a whole. PC values from this analysis for all
+permanent sampling plots in both image scences were extracted using a
+buffer with a radius of 50m.
+
+For both site based and scene analysis we correlate PC values with
+permanent sample plot inventory data such as stem density, above ground
+biomass and tree species richness. Additional comparisons are made
+between contemporary Geo-Eye data and the historical orthomosaic derived
+PC values. Due to the few available permanent sampling plots in both
+scenes we used a non-parametric paired signed rank (Wilcoxon) test to
+determine differences between the PC values of the Geo-Eye and
+historical orthomosaic image scenes across mono-dominant and mixed
+forest types. In all analysis, mono-dominant site 4 was removed from the
+analysis due to cloud contamination.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+Our analysis provides a first spatially explicity historical composite
+of aerial survey images mapping LULCC within the Congo Basin. The use of
+high resolution historical images combined with structure from motion
+image processing techniques allowed us to mosaic old imagery across a
+large extent. The final orthomosaic composition of the Yangambi region
+resulted in an image scene covering approximately 733 million pixels
+across \textasciitilde{}828 km\textsuperscript{2}
+(\textasciitilde{}23x36 km, Figure 2). The overall accuracy of the
+structure from motion orthomosaic composition was 0.88 m/pixel using the
+sparse cloud DEM for corrections at 45.8 m/pixel. The resulting
+georeferenced scene had a spatial accuracy of approximately 23m. Further
+georeferencing outside the SfM workflow reduced the mean error at the
+ground control points to 5.3 \(\pm\) 4.9 px (\textasciitilde{}4.7
+\(\pm\) 4.3 m), with a median error of 2.9 px (2.6m). The orthomosaic
+served as input for all subsequent LULCC analysis with all derived maps
+provided with the manuscript repository (see data \& code availability
+statements below).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/orthomosaic_maps} \caption{Overview of the final orthomosaic of the greater Yangambi region (A), a detailed inset (B) and the derived land use land cover change map displayed as the difference between a manual classification of the orthomosaic and a recent map by Hansen et al. 2013 (C) and the corresponding land cover map for inset B (D).}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\hypertarget{land-use-and-land-cover-change-above-ground-carbon}{%
+\subsection{Land-use and Land-Cover Change \& Above Ground
+Carbon}\label{land-use-and-land-cover-change-above-ground-carbon}}
+
+Our CNN deep learning classifier reached an Intersection-over-Union
+(IoU) accuracy of 97\% on the detection of disturbed forest in
+out-of-sample test data. Scaling our classifier to the whole historical
+orthomosaic we detected 162 km\textsuperscript{2} (or
+\textasciitilde{}20\% of the scene) of disturbed forests. A large
+fraction of the disturbed area was restored in the period between the
+two acquisitions. In total, 99 km\textsuperscript{2}, or little over
+half of the affected forest was restored (Figure 5C-D, dark blue).
+Recent deforested areas, as registered through satellite remote sensing,
+approximate 88 km\textsuperscript{2} (Table1, Figure 5C-D / light
+green).
+
+Recent deforestation follows a distincly different pattern compared to
+historical patterns. Historical deforestation showed a classical
+fishbone pattern for forest clearing with very sharp edges, while
+current patterns are patchy and ad-hoc (figure 5D, dark blue and green
+colours respectively). These differences are reflected in the analysis
+of landscape metrics of forest loss. Between the historical and
+contemporary LULCC maps we see an increase in small disturbances, as
+indicated by the decreasing area of the mean patch size, down to 37 ha
+from 120 ha historically, while perimeter lengths remained approximately
+the same, with 8653m and 9902m for historical and contemporary maps
+respectively (Table 2). This shift in perimeter area ratio led to a
+similar change in the fractal index, increasing in value to 1.13 \(\pm\)
+0.07 from 1.10 \(\pm\) 0.05 over time. Values closer to a fractal index
+of 2 suggest a more complex (fragmented) landscape.
+
+A comparison of forest edge plots with mixed forest plots showed no
+signficant difference in AGC, or other reported values such as species
+richness, basal area or stem density (Mann Whitney U test, p \textless{}
+0.05). Edge influence did not extend beyond 200 m from a forest edge,
+but still represented an area of 132 km\textsuperscript{2}.
+
+Changes in both land-use and land-cover led to concomitant changes in
+above ground carbon stocks. Recovery throughout the region was
+characterized for patches of forest and plantations. Assuming high
+density stands, based on previous work, this could amount to a carbon
+gains of 1592 Gg C, offsetting more recent losses of approximately 1408
+Gg C. On the other hand, at the low end, if we assume a lower carbon
+density of 81.8 Mg C ha\textsuperscript{-1} this would result in a total
+carbon gain of 811 Gg C. Using our approach results indicate that
+overall deforestation around Yangambi has resulted in a loss of
+\textasciitilde{}2416 Gg C in AGC stocks.
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-6}Land use land cover change statistics of forest cover around Yangambi in the central Congo Basin. The data evaluates a difference between a historical (1958) aerial photography based survey and the Hansen et al. 2013 based satellite remote sensing data. Spatial coverage statistics are provided in square kilometers (km) and hectares (ha), rounded to the nearest integer as well as Above Ground Carbon (AGC) scaled using recent survey measurements.}
+\centering
+\begin{tabular}[t]{lrrl}
+\toprule
+\multicolumn{3}{c}{ } & \multicolumn{1}{c}{AGC} \\
+\cmidrule(l{3pt}r{3pt}){4-4}
+  & $km\textsuperscript{2}$ & ha & (Gg C $ha\textsuperscript{-1}$\\
+\midrule
+Forest & 685 & 68455 & -\\
+-  of which edges & 132 & 13151 & -\\
+Regrowth > 1958 loss & 99 & 9918 & 811 - 1592\\
+Loss > 2000 & 88 & 8776 & 1408\\
+Loss > 1958 (permanent) & 63 & 6282 & 1008\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-7}Landscape metrics for historical and contemporary deforestation patterns. We report patch perimeter and area, their ratio and fractal dimension. Values are reportedpat as mean $\pm$ standard deviation, across all deforestation patches.}
+\centering
+\begin{tabular}[t]{lllll}
+\toprule
+  & perimeter (m) & area (ha) & ratio ($m\textsuperscript{-1}$) & fractal dimension\\
+\midrule
+historical & 8653 $\pm$ 35676 & 120 $\pm$ 659 & 0.031 $\pm$ 0.014 & 1.099 $\pm$ 0.052\\
+contemporary & 9902 $\pm$ 56975 & 37 $\pm$ 226 & 0.046 $\pm$ 0.014 & 1.13 $\pm$ 0.071\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\hypertarget{canopy-structure-foto-texture-analysis-1}{%
+\subsection{Canopy structure \& FOTO texture
+analysis}\label{canopy-structure-foto-texture-analysis-1}}
+
+Visual interpretation of the scenes provide evidence that most locations
+do not change dramatically with respect to canopy composition, except
+for the large areas of disturbances in contemporary fallow or
+young-regrowth plots. One marked difference is noted in the
+mono-dominant site 6 (Appendix Table 1). Here, the current mono-dominant
+\emph{Brachystegia laurenttii} is a recent development, changing the
+canopy structure visibly during the last half century (Figure 6). The
+previous varied canopy structure gave way to a more dense and uniform
+canopy. This is reflected in a change of the FOTO PC value from 0.19
+historically to its current value of 0.54. This historical value is
+similar to the mean of contemporary mono-dominant stands with PC
+averaging 0.34 \(\pm\) 0.1, and is only slightly higher than historical
+values for a mixed forest (0.18 \(\pm\) 0.08). The reverse pattern is
+seen in the contemporary PC values. Here, the value of 0.54 exceeds
+those of most mono-dominant stands (0.35 \(\pm\) 0.08), and is even
+further removed from the values noted for mixed forests (0.12 \(\pm\)
+0.03).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/visual_comparison_psp} \caption{Visual comparison between a historical (A) and contemporary (B) permanent sampling plot. The site is currently listed as a mono-dominant Brachystegia laurenttii stand. Note the structural differences with a 'courser' canopy structure in the historical image compared to the more closed contemporary stand.}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+Using only small subsets around existing permanent sampling plots we
+show distinct differences between forest types, with PC values in both
+historical and contemporary imagery markedly higher for the
+mono-dominant forest types compared to all others (Appendix Figure 3).
+Provided that the young-regrowth and fallow permanent sampling plots
+have seen recent disturbance the Wilcoxon signed rank test on the mixed
+and mono-dominant plots between the historical and contemporary PC
+values did not show a significant difference (p \textgreater{} 0.05).
+Similarly, no significant different using PC values extracted from the
+whole scene analysis was noted (p \textgreater{} 0.05). Any
+relationships between contemporary Geo-Eye data and permanent sampling
+plot measurements of Above Ground Biomass, stem density and species
+richness were non-significant (p \textgreater{} 0.05, Appendix Figures
+4-6).
+
+Furthermore, visual inspection of the scene wide analysis suggests
+historical scences do not show landscape wide canopy features (Figure 7
+A-B), unlike the contemporary scene (Figure 7 C-D). Where the FOTO
+algorithm picks up landscape features such as changes in texture across
+the contemporary Geo-Eye scene (e.g.~the river valley as a diagonal line
+in Figure 7D), however, no corresponding landscape patterns are found by
+the FOTO algorithm in the historical orthomosaic.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{./figures/foto_maps} \caption{RGB visualizations of the first three principal components of scene wide FOTO texture analysis of historical and current (Geo-Eye) imagery. Current permanent sampling plots of mono-dominant, mixed, fallow and young (edge) forest plots are marked with open triangles, open circles, open squares and crosses, respectively.}\label{fig:unnamed-chunk-9}
+\end{figure}
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Finely grained spatial data sources, such as remote sensing imagery, are
+rare before the satellite era (\textless{}1970). This lack of data
+limits our understanding of how forest structure has varied over longer
+time periods in especially remote areas. Long term assessment can be
+extended by using large inventories of historical aerial survey data
+\citep{kadmon1999, song2015, nita2018}. However, across the Congo Basin
+this data is rare, or difficult to access. Despite the difficulties in
+assessing hidden disturbances caused by deforestation, poorly recorded
+official assessments or simply those invisible to standard remote
+sensing techniques \citep{peres2006}, remote sensing generally remains
+the best way to map and quantify LULCC \citep{houghton2012}. Despite
+these challenges in recovery and validation we present a first analysis
+of LULCC using historical aerial survey data for the central Congo
+Basin. We used a combination of Structure-from-Motion and a
+convolutional neural net deep learning approach to map deforestation
+across a large extent, providing a long term view of LULCC in the
+central Congo Basin
+
+\hypertarget{data-recovery-challenges}{%
+\subsection{Data recovery challenges}\label{data-recovery-challenges}}
+
+In our study the archive data recovered was limited to contact prints
+and therefore did not represent the true resolution of the original
+negative. In addition, analogue photography clearly produces a distinct
+softness compared to digital imagery (Figure 4). Despite favourable
+nadir image acquistions \citep{verhoeven2017} image softness combined
+with illumination effects between flight paths, and the self-similar
+nature of vast canopy expanses \citep{park2019, simini2010, sole1995},
+limited our ability to provide wall-to-wall coverage of the entire
+dataset containing 334 images. Few man made features in the scenes also
+made georeferencing challenging. Although the village of Yangambi
+provided a range of buildings as (hard-edge) references, other areas
+within the central Congo Basin might have fewer permanent structures and
+would require the use of soft-edged landscape features (e.g.~trees,
+river outflows). Research has shown that soft-edged features can help
+georeference scenes even when containing few man-made features
+\citep{hughes2006}, however accuracy becomes compromised. Our two step
+georeferencing approach resulted in a referencing accuracy of
+\textasciitilde{}4.7 \(\pm\) 4.3 m across reference points. However, it
+shoud be noted that referencing accuracy of the final scene is less
+constrained toward the edges of the scene.
+
+\hypertarget{land-use-land-cover-change-above-ground-carbon}{%
+\subsection{Land-use, Land-Cover change \& Above Ground
+Carbon}\label{land-use-land-cover-change-above-ground-carbon}}
+
+When classifying our orthomosaic into forest and non-forest states we
+favoured a deep learning supervised classification using a Convoluted
+Neural Network over manual segmentation to guarantee an
+``apples-to-apples'' comparison between the historical and the
+contemporary GFC forest cover maps. We acknowledge that both
+classifications use different features, i.e.~spectral or spatial data,
+but attain a similarly high accuracy of 97\% and 99\%
+\citep{hansen2013}, for the GFC and our CNN map respectively. Despite a
+number of challenges we were able to map and quantify a vast continuous
+area of tropical forest, with limited manual annotation requirements.
+
+Our analysis shows that the majority of deforestation around Yangambi
+happened toward the late 1950's (162 km\textsuperscript{2}).
+Considerable regrowth has occured since the aerial survey was executed
+(99 km\textsuperscript{2}), and socio-economic instability prevented
+further large scale forest exploitation. In particular, many plantations
+have reached maturity and forest has re-established in previously
+cleared or disturbed areas. The majority of this forest recovery takes
+the form of isolated patches of forest but is offset by further
+deforestation of previously untouched forest. Generally, the function
+and structure of forests can be influenced by forest edges that are
+located up to 1km away however most effects are pronounced within the
+first 300m from the edge \citep{gascon2000}. Our analysis of edge
+effects on AGC has shown that the influence is negligible 200m away from
+the edge. \citet{phillips2006} have shown similar weak responses to edge
+effects in the Amazon forest. Due to a lack of data on the extent
+(depth) of edge effects and their influence on AGC beyond 200m we did
+not include any estimates of carbon loss or gain within these zones.
+However, it must be stated that the influence of edges throughout the
+landscape was not marginal. as these areas would account for 132
+km\textsuperscript{2}. Thus edges could have a substantial negative
+\citep{brinck2017} or positive \citep{reinmann2017} influence on AGC.
+Similarly, uncertainties in how to explicitly correct for plantations in
+the landscape present a further challenge. Thus although our estimates
+are only indicative they do underscore the important influence of
+landscape structure when carbon accounting. However, our findings do not
+indicate that deforestation in Congo basin is declining, on the
+contrary.
+
+Over the past half century there has been a clear shift in land use in
+Yangambi (Figure 5). Land use has shifted away from for example a
+regular fishbone deforestation pattern that emerges when (large scale)
+agricultural interests dominate the landscape \citep{arima2015}, to a
+more fragmented landscape (Figure 5D). The latter former? is consistent
+with historical land management at the time of the aerial survey
+\citep{bustillo2018}. These regular patterns have since been reversed
+because of a decrease in large scale intensive agriculture, replaced by
+ad-hoc small scale subsistence farming with large perimeter to area
+relationships (i.e.~ragged edges). Consequently, edge effects in the
+current landscape are far more pronounced than in the historical scene.
+
+Visual inspection of the images also suggests that reforestation within
+the historically cleared areas and experimental plots is not necessarily
+limited to areas far removed from more densely populated areas. For
+example, large reforested areas exist close to the Congo stream and
+Yangambi village itself (Fig. 5). Here, regional political components,
+such as land leases and large scale ownership could have played a role
+in safeguarding some of these areas for rewilding or sustainable
+management \citep{arima2014, larson2011}. Despite widespread
+anthropogenic influences throughout the tropics \citep{lewis2015} the
+retention of these forested areas show the potential of explicit or
+implicit protective policy measures (e.g.~INERA concessions,
+\citet{bustillo2018}) on a multi-decadal time scale. Forest regrowth in
+non-continuous areas within Yangambi could increase landscape
+connectivity and help increase biodiversity \citep{vandeperre2018}.
+
+Our analysis therefore provides an opportunity to highlight and study
+those regions that have previously suffered confirmed long-term
+disturbances, and those that have been restored since. Assessments of
+old plantations and recovering clear-cut forests can serve as a guide to
+help estimate carbon storage capacity and forest recovery rates in
+managed and unmanaged conditions
+\citep{gourlet-fleury2013, sader1988, achard2014} over the mid- to
+long-term, in support of rewilding and general forest restoration
+\citep{arima2014, larson2011, vandeperre2018}. In addition, mapping
+long-term edge effects can further support research into issues such as
+receding forest edges \citep{gascon2000}.
+
+\hypertarget{canopy-structure-foto-texture-analysis-2}{%
+\subsection{Canopy structure \& FOTO texture
+analysis}\label{canopy-structure-foto-texture-analysis-2}}
+
+Finally the FOTO technique used to quantify relationships between canopy
+structure and forest characteristics rendered no valuable insights of
+either the historical orthomosaic or recent Geo-Eye scene. Similarly
+weak correlations were found previously by \citet{solorzano2018}. In
+contrast site based texture metric statistics did show correspondence
+between historical and contemporary satellite imagery. However, none of
+them were either consistent or significant. Although visual
+interpretation shows distinctly different canopy structures (Figure 5)
+the differences in how resolution is defined and issues related to image
+quality prevented us from quantifying these further. Unlike large scale
+studies by \citet{Ploton2012} we could not scale this technique to
+historical data. We advise that future valorisation efforts should
+preferentially work from foto negatives (if available) to ensure optimal
+data quality in resolution, contrast and overall sharpness.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+Given the impact of tropical forest disturbances on atmospheric CO\_2
+emissions, biodiversity and ecosystem productivity accurate long term
+reporting on land-cover and land-use change especially in the
+pre-satellite era is an imperative. Our analysis of historical aerial
+survey images of the Central Congo Basin provides a window into the
+state of the forest at the start of the anthropocene. Efforts to
+quantify canopy texture and their link to carbon storage had limited to
+no success.We have shown that historical aerial survey data can be used
+to quantify land-use and land-cover change using a highly automated
+workflow to quantify the structure and extent of forest cover change
+that can help assess the impact of fragmentation on above ground carbon
+stocks. We also show a shift from previously highly structured
+industrial deforestation of large areas, to discrete smallholder
+clearing for farming, increasing landscape fragmentation but also
+opportuntiy for substantial regrowth. Efforts to quantify canopy texture
+and their link to carbon storage had limited to no success. As such, our
+analysis provides insights into the state of rarely studied tropical
+forests and the rate at which deforestation and reforestation has taken
+place over a multi-decadal scale in the central Congo basin providing a
+useful historical context to land-cover and land-use change spatial
+patterns for interpreting past and ongoing field research in the area.
+
+\hypertarget{additional-information-and-declarations}{%
+\section{Additional Information and
+Declarations}\label{additional-information-and-declarations}}
+
+\hypertarget{data-availability}{%
+\subsection{Data availability}\label{data-availability}}
+
+Hufkens et al.~(2019). A curated dataset of aerial survey images over
+the central Congo Basin, 1958. Zenodo: doi.org/10.5281/zenodo.3547767.
+All data not included in the latter repository can be found bundled with
+the analysis code as listed below. Proprietary datasets (i.e.~Geo-Eye
+data) are not shared, but purchase order numbers allow for acquisition
+of these datasets to ensure reproducibility. The \citet{hansen2013}
+image data is freely available from
+\href{https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.6.html}{the
+GFC project website}.
+
+\hypertarget{code-availability}{%
+\subsection{Code availability}\label{code-availability}}
+
+All analysis code is available as an R \citep{rcoreteam2019} project
+(\url{https://github.com/khufkens/orthodrc}). The analysis relied
+heavily on the `raster' \citep{hijmans2019}, `RStoolbox'
+\citep{leutner2019}, and `landscapemetrics' \citep{hesselbarth2019}
+packages, while post-processing and plotting was facilitated by the
+`tidyverse' ecosystem \citep{wickham2017}, `ggthemes'
+\citep{arnold2019}, `scales' \citep{wickham2018} and `cowplot'
+\citep{wilke2019}. Additional plotting elements were formatted or
+provided by `sf' \citep{pebesma2018} and `rnaturalearth'
+\citep{south2017} packages, respectively. I'm grateful for the
+contributions to the scientific community by the developers of these
+packages.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% optional
+% \supplementary{The following are available online at www.mdpi.com/link, Figure S1: title, Table S1: title, Video S1: title.}
+%
+% % Only for the journal Methods and Protocols:
+% % If you wish to submit a video article, please do so with any other supplementary material.
+% % \supplementary{The following are available at www.mdpi.com/link: Figure S1: title, Table S1: title, Video S1: title. A supporting video article is available at doi: link.}
+
+\vspace{6pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\acknowledgments{This research was supported through the Belgian Science Policy office
+COBECORE project (BELSPO; grant BR/175/A3/COBECORE). KH acknowledges
+funding from the European Union Marie Skłodowska-Curie Action (project
+number 797668). I'm grateful for the support of Thales D'Haulleville
+volunteering his time in scanning the images.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{K.H. conceived and designed the study, analyzed the data, prepared
+figures and tables, authored, reviewed and approved the final draft of
+the manuscript. T.d.H. scanned all image data. E.K. and T.d.H. provided
+plot based AGC estimates. T.D., K.J., E.K, H.B., P.S., F.V.,S.M., M.A.,
+J.V.D.B., H.V and L.W. reviewed the final manuscript.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\conflictsofinterest{The authors declare no conflict of interest. The founding sponsors had
+no role in the design of the study; in the collection, analyses, or
+interpretation of data; in the writing of the manuscript, an in the
+decision to publish the results.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here.
+
+%=====================================
+% References, variant A: internal bibliography
+%=====================================
+% \reftitle{References}
+% \begin{thebibliography}{999}
+% % Reference 1
+% \bibitem[Author1(year)]{ref-journal}
+% Author1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142-149, DOI.
+% % Reference 2
+% \bibitem[Author2(year)]{ref-book}
+% Author2, L. The title of the cited contribution. In {\em The Book Title}; Editor1, F., Editor2, A., Eds.; Publishing House: City, Country, 2007; pp. 32-58, ISBN.
+% \end{thebibliography}
+
+% The following MDPI journals use author-date citation: Arts, Econometrics, Economies, Genealogy, Humanities, IJFS, JRFM, Laws, Religions, Risks, Social Sciences. For those journals, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%=====================================
+% References, variant B: external bibliography
+%=====================================
+\reftitle{References}
+\externalbibliography{yes}
+\bibliography{bibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

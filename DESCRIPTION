@@ -1,0 +1,42 @@
+Package: orthodrc
+Version: 1.0.0
+Title: Yangambi aerial imagery manuscript
+Description: Package and data repository for the Yangambi aerial imagery
+  recovery manuscript. Serves to assure proper package dependencies and provide 
+  a data repository for (some of) the data. To access the full repository 
+  you are required to fork or download the github repository.
+URL: https://github.com/khufkens/orthodrc
+Depends:
+    R (>= 3.4)
+Imports:
+    raster,
+    stats,
+    parallel,
+    grDevices,
+    tidyverse,
+    RStoolbox,
+    sf,
+    landscapemetrics,
+    ggthemes,
+    ggplot2,
+    scales,
+    tools,
+    foto,
+    rnaturalearth,
+    cowplot
+License: AGPL-3
+Authors@R: c(person(
+               family = "Hufkens",
+               given = "Koen",
+               email = "koen.hufkens@gmail.com",
+               role = c("aut", "cre"),
+               comment = c(ORCID = "0000-0002-5070-8109")))
+LazyData: true
+ByteCompile: true
+RoxygenNote: 6.1.1
+Suggests:
+    rgdal,
+    knitr,
+    rmarkdown,
+    kableExtra
+VignetteBuilder: knitr
