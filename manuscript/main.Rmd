@@ -92,7 +92,7 @@ output: rticles::mdpi_article
     rename(perimeter = value)
 
   df$perimeter <- df$perimeter
-
+  
   area <- lsm_p_area(r) %>%
     filter(class == 1) %>%
     select(value) %>%
@@ -107,24 +107,25 @@ output: rticles::mdpi_article
   df$pa_ratio <- df$perimeter/(df$area*(100*100))
 
   df <- df %>%
-    filter(area > 1) %>%
+    filter(area > 1,
+           area < quantile(area, 0.95)) %>%
     summarize(
       perimeter = paste0(
-        round(mean(perimeter)),
+        round(mean(perimeter),2),
         " $\\pm$ ",
-        round(sd(perimeter))),
+        round(sd(perimeter),2)),
       area = paste0(
-        round(mean(area)),
+        round(mean(area), 2),
         " $\\pm$ ",
-        round(sd(area))),
+        round(sd(area), 2)),
       ratio = paste0(
-        round(mean(pa_ratio),3),
+        round(mean(pa_ratio), 2),
         " $\\pm$ ",
-        round(sd(pa_ratio),3)),
+        round(sd(pa_ratio), 2)),
       fractal = paste0(
-        round(mean(fractal_index),3),
+        round(mean(fractal_index), 2),
         " $\\pm$ ",
-        round(sd(fractal_index),3))
+        round(sd(fractal_index), 2))
     )
 
   return(df)
@@ -228,7 +229,7 @@ To map long term land-use and land-cover change in the Yangambi region we used t
 
 ### Landscape fragmentation & Above Ground Carbon estimates
 
-To quantify changes in the structure of forest cover and its disturbances we used spatial pattern analysis landscape fragmentation metrics [@dale1999]. We report the ratio of edge to area and the fractal index to quantify landscape complexity of forest disturbances. Statistics were calculated for all forest disturbance patches larger than 1 ha using the R package landscapemetrics [@hesselbarth2019]. We provide mean and standard deviation on edge, area, their ratio and fractal dimension for both the historical and contemporary @hansen2013 forest cover maps.
+To quantify changes in the structure of forest cover and its disturbances we used spatial pattern analysis landscape fragmentation metrics [@dale1999]. We report the ratio of edge to area and the fractal index to quantify landscape complexity of forest disturbances. Statistics were calculated for all forest disturbance patches larger than 1 ha and smaller than the 95^th^ percentile of the patch size distribution using the R package landscapemetrics [@hesselbarth2019]. We provide mean and standard deviation on edge, area, their ratio and fractal dimension for both the historical and contemporary @hansen2013 forest cover maps.
 
 We estimated above ground carbon (AGC) losses and gains over time using plot based averages of recent inventory data at permanent sampling plots in the area (Figure 2). We refer to @Kearsley2013 for the survey method and allometric relations used to scale the survey data. Unlike standard square 1 ha plots edge plots were set back 200m from forest edges and were 50x200m, with the 50m side of the plot along the forest edge and continuing 200m into the forest (Appendix Table 1). We further confirmed that forest edge plots did not show a significantly different AGC compared to those of non-edged / mixed forest plots (Mann Whitney U test, p < 0.05). Thus it was not necessary to explicitly quantify changes in AGC caused by edge effects. Moreover, we used the mean values of the mixed forest as representative for potential AGC losses. Despite the challenges inherent in quantifying AGC for forest edges we mapped the total extent of the edges in the contemporary landscape. To align our landscape analysis with exploratory analysis of the survey data we used a buffer of 200m to estimate the extent of forest edges and patches, up to the location of forest edge plots.
 
@@ -254,17 +255,13 @@ knitr::include_graphics('./figures/orthomosaic_maps.png')
 
 ## Land-use and Land-Cover Change & Above Ground Carbon
 
-Our CNN deep learning classifier reached an Intersection-over-Union (IoU) accuracy of 97% on the detection of disturbed forest in out-of-sample test data. A visual comparison on recent pan-chromatic Geo-Eye 1 data shows good agreement between the landsat based GFC data and downscaled CNN results (Appendix Figure 7).
+Our CNN deep learning classifier reached an Intersection-over-Union (IoU) accuracy of 97% on the detection of disturbed forest in out-of-sample test data. A visual comparison on recent pan-chromatic Geo-Eye 1 data shows good agreement, for a total of 87% of all pixels, between the landsat based GFC data and downscaled CNN results (Appendix Table 3 and Figure 7). Scaling our classifier to the whole historical orthomosaic we detected 162 km^2^ (or ~20% of the scene) of disturbed forests. A large fraction of the disturbed area was restored in the period between the two acquisitions. In total, 99 km^2^, or little over half of the affected forest was restored (Figure 5C-D, dark blue). Recent deforested areas, as registered through satellite remote sensing, approximate 88 km^2^ (Table1, Figure 5C-D / light green).
 
-[NOTE STATS]
-
-Scaling our classifier to the whole historical orthomosaic we detected 162 km^2^ (or ~20% of the scene) of disturbed forests. A large fraction of the disturbed area was restored in the period between the two acquisitions. In total, 99 km^2^, or little over half of the affected forest was restored (Figure 5C-D, dark blue). Recent deforested areas, as registered through satellite remote sensing, approximate 88 km^2^ (Table1, Figure 5C-D / light green).
-
-Recent deforestation follows a distincly different pattern compared to historical patterns. Historical deforestation showed a classical fishbone pattern for forest clearing with very sharp edges, while current patterns are patchy and ad-hoc (figure 5D, dark blue and green colours respectively). These differences are reflected in the analysis of landscape metrics of forest loss. Between the historical and contemporary LULCC maps we see an increase in small disturbances, as indicated by the decreasing area of the mean patch size, down to 37 ha from 120 ha historically, while perimeter lengths remained approximately the same, with 8653m and 9902m for historical and contemporary maps respectively (Table 2). This shift in perimeter area ratio led to a similar change in the fractal index, increasing in value to 1.13 $\pm$ 0.07 from 1.10 $\pm$ 0.05 over time. Values closer to a fractal index of 2 suggest a more complex (fragmented) landscape.
+Recent deforestation follows a distincly different pattern compared to historical patterns. Historical deforestation showed a classical fishbone pattern for forest clearing with very sharp edges, while current patterns are patchy and ad-hoc (figure 5D, dark blue and green colours respectively). These differences are reflected in the analysis of landscape metrics of forest loss. Between the historical and contemporary LULCC maps we see an increase in small disturbances, as indicated by the decreasing area of the mean patch size, down to ~1.86 $\pm$ 0.75 ha from ~5.25 $\pm$ 5.02 ha historically. Perimeter lengths were longer historically, at 1451.58 $\pm$ 943.27 m,  compared to contemporary landscapes ~921.74 $\pm$ 362.59 m (Table 2). This shift in perimeter area ratio led to a similar change in the fractal index, increasing in value to 1.1 $\pm$ 0.05 from 1.09 $\pm$ 0.04 over time. Values closer to a fractal index of 2 suggest a more complex (fragmented) landscape.
 
 A comparison of forest edge plots with mixed forest plots showed no signficant difference in AGC, or other reported values such as species richness, basal area or stem density (Mann Whitney U test, p < 0.05). Edge influence did not extend beyond 200 m from a forest edge, but still represented an area of 132 km^2^.
 
-Changes in both land-use and land-cover led to concomitant changes in above ground carbon stocks. Recovery throughout the region was characterized for patches of forest and plantations. Assuming high density stands, based on previous work, this could amount to a carbon gains of 1592 Gg C, offsetting more recent losses of approximately 1408 Gg C. On the other hand, at the low end, if we assume a lower carbon density of 81.8 Mg C ha^-1^ this would result in a total carbon gain of 811 Gg C. Using our approach results indicate that overall deforestation around Yangambi has resulted in a loss of ~2416 Gg C in AGC stocks.
+Changes in both land-use and land-cover led to concomitant changes in above ground carbon stocks. Recovery throughout the region was characterized for patches of forest and plantations. Assuming high density stands, based on previous work, this could amount to a carbon gains of 1592 Gg C across our study area, offsetting more recent losses of approximately 1408 Gg C. On the other hand, at the low end, if we assume a lower carbon density of 81.8 Mg C ha^-1^ this would result in a total carbon gain of 811 Gg C. Using our approach results indicate that overall deforestation around Yangambi has resulted in a loss of ~2416 Gg C in AGC stocks.
 
 ```{r echo = FALSE, eval = TRUE}
 change_stats %>%

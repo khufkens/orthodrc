@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 DEC 2019 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 DEC 2019 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,112 +1066,107 @@ Package pdftex.def Info: ./figures/flight_paths.png  used on input line 307.
 (pdftex.def)             Requested size: 443.86319pt x 524.94775pt.
 [4 <./figures/print_examples.jpg>] [5 <./figures/flight_paths.png (PNG copy)>] 
 [6]
-<./figures/synthetic_landscape.png, id=262, 1178.4025pt x 602.25pt>
+<./figures/synthetic_landscape.png, id=263, 1178.4025pt x 602.25pt>
 File: ./figures/synthetic_landscape.png Graphic file (type png)
 <use ./figures/synthetic_landscape.png>
 Package pdftex.def Info: ./figures/synthetic_landscape.png  used on input line 
-419.
+425.
 (pdftex.def)             Requested size: 443.86319pt x 226.84485pt.
-<./figures/cnn_diagram.pdf, id=264, 671.6292pt x 202.8378pt>
+<./figures/cnn_diagram.pdf, id=265, 671.6292pt x 202.8378pt>
 File: ./figures/cnn_diagram.pdf Graphic file (type pdf)
 <use ./figures/cnn_diagram.pdf>
-Package pdftex.def Info: ./figures/cnn_diagram.pdf  used on input line 423.
+Package pdftex.def Info: ./figures/cnn_diagram.pdf  used on input line 429.
 (pdftex.def)             Requested size: 443.86319pt x 134.04977pt.
 [7] [8 <./figures/synthetic_landscape.png> <./figures/cnn_diagram.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cnn_diagram.pdf): PDF inclusion: inval
 id other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >] [9] [10]
-<./figures/orthomosaic_maps.png, id=323, 1957.3125pt x 1656.1875pt>
+<./figures/orthomosaic_maps.png, id=325, 1957.3125pt x 1656.1875pt>
 File: ./figures/orthomosaic_maps.png Graphic file (type png)
 <use ./figures/orthomosaic_maps.png>
-Package pdftex.def Info: ./figures/orthomosaic_maps.png  used on input line 561
+Package pdftex.def Info: ./figures/orthomosaic_maps.png  used on input line 570
 .
 (pdftex.def)             Requested size: 443.86319pt x 375.55759pt.
-[11 <./figures/orthomosaic_maps.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12]
-<./figures/visual_comparison_psp.png, id=337, 542.025pt x 274.626pt>
+[11] [12 <./figures/orthomosaic_maps.png>] [13]
+<./figures/visual_comparison_psp.png, id=345, 542.025pt x 274.626pt>
 File: ./figures/visual_comparison_psp.png Graphic file (type png)
 <use ./figures/visual_comparison_psp.png>
 Package pdftex.def Info: ./figures/visual_comparison_psp.png  used on input lin
-e 668.
+e 682.
 (pdftex.def)             Requested size: 443.86319pt x 224.89725pt.
-[13 <./figures/visual_comparison_psp.png>]
 <./figures/foto_maps.png, id=346, 867.24pt x 867.24pt>
 File: ./figures/foto_maps.png Graphic file (type png)
 <use ./figures/foto_maps.png>
-Package pdftex.def Info: ./figures/foto_maps.png  used on input line 695.
+Package pdftex.def Info: ./figures/foto_maps.png  used on input line 709.
 (pdftex.def)             Requested size: 443.86319pt x 443.86128pt.
-[14] [15 <./figures/foto_maps.png (PNG copy)>] [16] [17] [18] (./main.bbl [19] 
-[20] [21]
-Underfull \hbox (badness 4205) in paragraph at lines 516--522
+[14 <./figures/visual_comparison_psp.png>] [15 <./figures/foto_maps.png (PNG co
+py)>] [16] [17] [18] (./main.bbl [19] [20] [21]
+Underfull \hbox (badness 4205) in paragraph at lines 522--528
 []\T1/ppl/m/n/9 (+20) Kadmon, R.; Harari-Kremer, R.  Study-ing Long-Term Veg-e-
 ta-tion Dy-nam-ics Us-ing Dig-i-tal
  []
 
-
-Underfull \hbox (badness 1789) in paragraph at lines 544--550
+[22]
+Underfull \hbox (badness 1789) in paragraph at lines 550--556
 []\T1/ppl/m/n/9 (+20) Simini, F.; An-fodillo, T.; Car-rer, M.; Ba-navar, J.R.; 
 Mar-i-tan, A.  Self-similarity and scal-ing
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 544--550
+Underfull \hbox (badness 1596) in paragraph at lines 550--556
 \T1/ppl/m/n/9 (+20) in for-est com-mu-ni-ties.  \T1/ppl/m/it/9 (+20) Pro-ceed-i
 ngs of the Na-tional Academy of Sci-ences \T1/ppl/b/n/9 2010\T1/ppl/m/n/9 (+20)
  , \T1/ppl/m/it/9 (+20) 107\T1/ppl/m/n/9 (+20) , 7658--7662.
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 557--563
+Underfull \hbox (badness 1024) in paragraph at lines 563--569
 \T1/ppl/m/n/9 (+20) Im-pli-ca-tions for mea-sur-ing lat-eral chan-nel move-ment
  in a GIS.  \T1/ppl/m/it/9 (+20) Ge-o-mor-phol-ogy \T1/ppl/b/n/9 2006\T1/ppl/m/
 n/9 (+20) , \T1/ppl/m/it/9 (+20) 74\T1/ppl/m/n/9 (+20) , 1--16.
  []
 
-[22])
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 968.
+)
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 983.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 968.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 983.
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 4441) in paragraph at lines 968--968
+Underfull \hbox (badness 4441) in paragraph at lines 983--983
   [] \T1/ppl/m/n/9 (+20) 2019 by the au-thors. Sub-mit-ted to \T1/ppl/m/it/9 (+
 20) Re-mote Sens. \T1/ppl/m/n/9 (+20) for pos-si-ble open ac-cess pub-li-ca-tio
 n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--968
+Underfull \hbox (badness 10000) in paragraph at lines 983--983
 \T1/ppl/m/n/9 (+20) un-der the terms and con-di-tions of the Cre-ative Com-mons
  At-tri-bu-tion (CC BY) li-cense
  []
 
 [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 968.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 968.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 983.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 983.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 968.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 968.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 983.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 983.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C3A462602EC2E7316041DE765425C4E1;4069.
  ) 
 Here is how much of TeX's memory you used:
- 26103 strings out of 492649
- 449645 string characters out of 6129622
- 566082 words of memory out of 5000000
- 29032 multiletter control sequences out of 15000+600000
- 62457 words of font info for 315 fonts, out of 8000000 for 9000
+ 26110 strings out of 492649
+ 449741 string characters out of 6129622
+ 567149 words of memory out of 5000000
+ 29035 multiletter control sequences out of 15000+600000
+ 62616 words of font info for 317 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,62p,2150b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,14n,62p,2150b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/tex
@@ -1182,10 +1177,10 @@ e/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/20
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (23 pages, 10646817 bytes).
+Output written on main.pdf (23 pages, 10648921 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 522 compressed objects within 6 object streams
- 147 named destinations out of 1000 (max. 500000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 525 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
  41186 words of extra memory for PDF output out of 42996 (max. 10000000)
 

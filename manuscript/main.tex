@@ -115,7 +115,7 @@ around Yangambi, central Congo Basin, in 1958. Our study leveraged
 Structure-from-Motion to generate a large orthomosaic covering 828
 km\textsuperscript{2}, counting 733 million pixels, at a sub meter
 resolution and geo-referenced to \textasciitilde{}4.7 \(\pm\) 4.3 m.
-Primary forest in the orthomosaic was classified with a Convoluted
+Primary forest in the orthomosaic was classified with a Convolutional
 Neural Network Deep Learning approach. We used these data to quantify
 LULCC, landscape and canopy complexity and scale above ground biomass
 between historical and contemporary condition. We show a shift from
@@ -386,9 +386,9 @@ cover}\label{classifying-forest-cover}}
 
 We automatically delineated all natural forest in the historical data,
 thus excluding tree plantations, thinned or deteriorated forest stands,
-fields and buildings. We used the Unet Convoluted Neural Net (CNN,
+fields and buildings. We used the Unet Convolutional Neural Net (CNN,
 \citet{ronneberger2015}) architecture implemented in Keras
-\citep{chollet2015} with an efficientnetb3 backbone
+\citep{chollet2015} with an efficientnetb3 pre-processing backbone
 \citep{yakubovskiy2019} running on TensorFlow \citep{martinabadi2015} to
 train a binary classifier (i.e.~forest or non-forested). This
 methodology is increasingly being used to automate pixel-level
@@ -404,16 +404,22 @@ overfitting. In order to limit stitch line misclassifications, along the
 seams of mosaicked images, we created synthetic landscapes with
 different forest tiles to mimick forest texture transitions. We applied
 this technique to 10\% of the generated synthetic landscapes. The CNN
-model was trained for 100 epochs on a graphics processing unit (GPU)
-maximizing the Intersect-over-Union (IoU) using additional data
-augmentation. Data augmentation included random cropping to 320 pixel
-squares, random orientation, scaling, perspective, contrast and
-brightness shifts and image blurring. During final model evaluation we
-report the IoU of our out-of-sample test datasets. The optimized model
-was used to classify the complete orthomosaic using a moving window
-approach with a step size of 110 pixels and a majority vote across
-overlapping areas to limit segmentation edge effects. We refer to Figure
-4 for a synoptic overview of the full deep learning learning workflow.
+model was trained for 100 epochs with a batch size of 30 using Adam
+optimization \citep{kingma2017}, maximizing the Intersect-over-Union
+(IoU) using Sørensen--Dice and categorical cross-entropy loss functions.
+Data augmentation included random cropping to 320 pixel squares, random
+orientation, scaling, perspective, contrast and brightness shifts and
+image blurring. During final model evaluation we report the IoU of our
+out-of-sample test datasets. The optimized model was used to classify
+the complete orthomosaic using a moving window approach with a step size
+of 110 pixels and a majority vote across overlapping areas to limit
+segmentation edge effects. We refer to Figure 4 for a synoptic overview
+of the full deep learning learning workflow. In addition, we used the
+first acquisition of a recent pan-chromatic Geo-Eye 1 stereo pair
+(GeoEye, 2012, Thornton, Colorado, U.S.A., order 737537, 2011-11-11
+8:55h GMT or 9:55h local time) to classify and visually assess the
+robustness of the algorithm on contemporary remote sensing imagery with
+the same moving window approach.
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{./figures/synthetic_landscape} \caption{An example synthetic landscape, combining homogeneous forest and non-forest images into a patchy landscape using random gaussian field based masks. The left panel shows a combined synthetic landscape, while the right panel shows the corresponding forest (black) and non-forest (white) labels.}\label{fig:unnamed-chunk-3}
@@ -434,7 +440,9 @@ of the GFC map we downsampled our historical forest cover data to 30m
 GFC resolution. We masked out all water bodies using the Global Forest
 Change survey data mask layer, and limited the analysis to the right
 bank of the Congo river. Where the datasets overlap we provide summary
-statistics of deforestation, reforestation and afforestation.
+statistics of deforestation, reforestation and afforestation. The same
+methodology was used to quantify CNN model performance across the
+Geo-Eye 1 scene.
 
 \hypertarget{landscape-fragmentation-above-ground-carbon-estimates}{%
 \subsubsection{Landscape fragmentation \& Above Ground Carbon
@@ -445,10 +453,11 @@ disturbances we used spatial pattern analysis landscape fragmentation
 metrics \citep{dale1999}. We report the ratio of edge to area and the
 fractal index to quantify landscape complexity of forest disturbances.
 Statistics were calculated for all forest disturbance patches larger
-than 1 ha using the R package landscapemetrics \citep{hesselbarth2019}.
-We provide mean and standard deviation on edge, area, their ratio and
-fractal dimension for both the historical and contemporary
-\citet{hansen2013} forest cover maps.
+than 1 ha and smaller than the 95\textsuperscript{th} percentile of the
+patch size distribution using the R package landscapemetrics
+\citep{hesselbarth2019}. We provide mean and standard deviation on edge,
+area, their ratio and fractal dimension for both the historical and
+contemporary \citet{hansen2013} forest cover maps.
 
 We estimated above ground carbon (AGC) losses and gains over time using
 plot based averages of recent inventory data at permanent sampling plots
@@ -495,26 +504,26 @@ can be used across multiple scenes using normalization
 
 We used an area of 400x400m (16 ha) around contemporary permanent
 sampling plot locations to quantify the general state of the canopy in
-both historical and contemporary remote sensing data. Contemporary data
-were resampled to the resolution of the historical data using a nearest
-neighbour interpolation for comparison. We used the first acquisition of
-a pan-chromatic Geo-Eye 1 stereo pair (GeoEye, 2012, Thornton, Colorado,
-U.S.A., order 737537, 2011-11-11 8:55h GMT or 9:55h local time). For
-permanent sampling plot locations in both historical and contemporary
-data a rectangular buffer of 200m around the centre of all plots was
-used to create small image subsets. All image subsets were processed
-using the R based FOTO implementation and package \citep{hufkens2019a}
-using global normalization, ensuring intercomparability of texture
-metrics across time and space \citep{Barbier2010}. We used a FOTO
-(moving) window size of 187 pixels (or \textasciitilde{}150m), as
-described in \citet{solorzano2018} and \citet{Barbier2010}, to ensure
-that multiple individual canopies could be included in the analysis. A
-buffer with a radius of 50m around the center of all permanent sampling
-plots was used to determine the average value of the first principle
-component (PC), explaining the majority of the variance in canopy
-texture. Where both the Geo-Eye data and the orthomosaic image
-overlapped we processed the intersecting region to explore a
-wall-to-wall comparison between past and current canopy texture metrics.
+both historical and contemporary pan-chromatic Geo-Eye 1 remote sensing
+data (GeoEye, 2012, Thornton, Colorado, U.S.A., order 737537, 2011-11-11
+8:55h GMT or 9:55h local time). Geo-Eye data were resampled to the
+resolution of the historical data using a nearest neighbour
+interpolation for comparison. For permanent sampling plot locations in
+both historical and contemporary data a rectangular buffer of 200m
+around the centre of all plots was used to create small image subsets.
+All image subsets were processed using the R based FOTO implementation
+and package \citep{hufkens2019a} using global normalization, ensuring
+intercomparability of texture metrics across time and space
+\citep{Barbier2010}. We used a FOTO (moving) window size of 187 pixels
+(or \textasciitilde{}150m), as described in \citet{solorzano2018} and
+\citet{Barbier2010}, to ensure that multiple individual canopies could
+be included in the analysis. A buffer with a radius of 50m around the
+center of all permanent sampling plots was used to determine the average
+value of the first principle component (PC), explaining the majority of
+the variance in canopy texture. Where both the Geo-Eye data and the
+orthomosaic image overlapped we processed the intersecting region to
+explore a wall-to-wall comparison between past and current canopy
+texture metrics.
 
 We used the standard FOTO methodology with fixed zones, instead of the
 moving window approach. The window size was set to the same size (187
@@ -567,7 +576,10 @@ Carbon}\label{land-use-and-land-cover-change-above-ground-carbon}}
 
 Our CNN deep learning classifier reached an Intersection-over-Union
 (IoU) accuracy of 97\% on the detection of disturbed forest in
-out-of-sample test data. Scaling our classifier to the whole historical
+out-of-sample test data. A visual comparison on recent pan-chromatic
+Geo-Eye 1 data shows good agreement, for a total of 87\% of all pixels,
+between the landsat based GFC data and downscaled CNN results (Appendix
+Table 3 and Figure 7). Scaling our classifier to the whole historical
 orthomosaic we detected 162 km\textsuperscript{2} (or
 \textasciitilde{}20\% of the scene) of disturbed forests. A large
 fraction of the disturbed area was restored in the period between the
@@ -584,13 +596,15 @@ current patterns are patchy and ad-hoc (figure 5D, dark blue and green
 colours respectively). These differences are reflected in the analysis
 of landscape metrics of forest loss. Between the historical and
 contemporary LULCC maps we see an increase in small disturbances, as
-indicated by the decreasing area of the mean patch size, down to 37 ha
-from 120 ha historically, while perimeter lengths remained approximately
-the same, with 8653m and 9902m for historical and contemporary maps
-respectively (Table 2). This shift in perimeter area ratio led to a
-similar change in the fractal index, increasing in value to 1.13 \(\pm\)
-0.07 from 1.10 \(\pm\) 0.05 over time. Values closer to a fractal index
-of 2 suggest a more complex (fragmented) landscape.
+indicated by the decreasing area of the mean patch size, down to
+\textasciitilde{}1.86 \(\pm\) 0.75 ha from \textasciitilde{}5.25 \(\pm\)
+5.02 ha historically. Perimeter lengths were longer historically, at
+1451.58 \(\pm\) 943.27 m, compared to contemporary landscapes
+\textasciitilde{}921.74 \(\pm\) 362.59 m (Table 2). This shift in
+perimeter area ratio led to a similar change in the fractal index,
+increasing in value to 1.1 \(\pm\) 0.05 from 1.09 \(\pm\) 0.04 over
+time. Values closer to a fractal index of 2 suggest a more complex
+(fragmented) landscape.
 
 A comparison of forest edge plots with mixed forest plots showed no
 signficant difference in AGC, or other reported values such as species
@@ -602,12 +616,12 @@ Changes in both land-use and land-cover led to concomitant changes in
 above ground carbon stocks. Recovery throughout the region was
 characterized for patches of forest and plantations. Assuming high
 density stands, based on previous work, this could amount to a carbon
-gains of 1592 Gg C, offsetting more recent losses of approximately 1408
-Gg C. On the other hand, at the low end, if we assume a lower carbon
-density of 81.8 Mg C ha\textsuperscript{-1} this would result in a total
-carbon gain of 811 Gg C. Using our approach results indicate that
-overall deforestation around Yangambi has resulted in a loss of
-\textasciitilde{}2416 Gg C in AGC stocks.
+gains of 1592 Gg C across our study area, offsetting more recent losses
+of approximately 1408 Gg C. On the other hand, at the low end, if we
+assume a lower carbon density of 81.8 Mg C ha\textsuperscript{-1} this
+would result in a total carbon gain of 811 Gg C. Using our approach
+results indicate that overall deforestation around Yangambi has resulted
+in a loss of \textasciitilde{}2416 Gg C in AGC stocks.
 
 \begin{table}[!h]
 
@@ -636,8 +650,8 @@ Loss > 1958 (permanent) & 63 & 6282 & 1008\\
 \toprule
   & perimeter (m) & area (ha) & ratio ($m\textsuperscript{-1}$) & fractal dimension\\
 \midrule
-historical & 8653 $\pm$ 35676 & 120 $\pm$ 659 & 0.031 $\pm$ 0.014 & 1.099 $\pm$ 0.052\\
-contemporary & 9902 $\pm$ 56975 & 37 $\pm$ 226 & 0.046 $\pm$ 0.014 & 1.13 $\pm$ 0.071\\
+historical & 1451.58 $\pm$ 943.27 & 5.25 $\pm$ 5.02 & 0.03 $\pm$ 0.01 & 1.09 $\pm$ 0.04\\
+contemporary & 921.74 $\pm$ 362.59 & 1.86 $\pm$ 0.75 & 0.05 $\pm$ 0.01 & 1.1 $\pm$ 0.05\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -745,7 +759,7 @@ constrained toward the edges of the scene.
 Carbon}\label{land-use-land-cover-change-above-ground-carbon}}
 
 When classifying our orthomosaic into forest and non-forest states we
-favoured a deep learning supervised classification using a Convoluted
+favoured a deep learning supervised classification using a Convolutional
 Neural Network over manual segmentation to guarantee an
 ``apples-to-apples'' comparison between the historical and the
 contemporary GFC forest cover maps. We acknowledge that both
@@ -886,8 +900,9 @@ GFC project website}.
 \hypertarget{code-availability}{%
 \subsection{Code availability}\label{code-availability}}
 
-All analysis code is available as an R \citep{rcoreteam2019} project
-(\url{https://github.com/khufkens/orthodrc}). The analysis relied
+All analysis code is available as an R / python \citep{rcoreteam2019}
+projects (\url{https://khufkens.github.io/orthodrc} \&
+\url{https://khufkens.github.io/orthodrc_cnn/}). The analysis relied
 heavily on the `raster' \citep{hijmans2019}, `RStoolbox'
 \citep{leutner2019}, and `landscapemetrics' \citep{hesselbarth2019}
 packages, while post-processing and plotting was facilitated by the
