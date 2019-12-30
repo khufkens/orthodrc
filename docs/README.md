@@ -50,9 +50,9 @@ img {
 
 Land Use and Land Cover change (LULCC) of African rainforest contribute to global carbon emissions. Yet, most historical estimates of LULCC and their carbon emissions rely on non-spatially explicity data in the pre-satellite era (< 1972).
 
-Past studies have expanded this pre-satellite time frame with declassified satellite surveillance data or aerial surveys, but none cover the Congo Basin. Here, we use historical aerial survey photos to map the extent and structure of LULCC around Yangambi, central Congo Basin, in 1958. Our study leveraged Structure-from-Motion to generate a large orthomosaic covering 828 km^2^, counting 733 million pixels, at a sub meter resolution and geo-referenced to ~4.7 +- 4.3 m. 
+Past studies have expanded this pre-satellite time frame with declassified satellite surveillance data or aerial surveys, but none cover the Congo Basin. Here, we use historical aerial survey photos to map the extent and structure of LULCC around Yangambi, central Congo Basin, in 1958. Our study leveraged Structure-from-Motion to generate a large orthomosaic covering 828 km^2, counting 733 million pixels, at a sub meter resolution and geo-referenced to ~4.7 +- 4.3 m. 
 
-Primary forest in the orthomosaic was classified with a Convolutional Neural Network Deep Learning approach. We used these data to quantify LULCC, landscape and canopy complexity and scale above ground biomass between historical and contemporary condition. We show a shift from historical highly structured industrial deforestation in 1958 (162 km^2^), to contemporary smallholder farming clearing (88 km^2^), increasing landscape fragmentation and forest edges. Efforts to quantify canopy texture and their link to carbon storage had limited to no success. 
+Primary forest in the orthomosaic was classified with a Convolutional Neural Network Deep Learning approach. We used these data to quantify LULCC, landscape and canopy complexity and scale above ground biomass between historical and contemporary condition. We show a shift from historical highly structured industrial deforestation in 1958 (162 km^2), to contemporary smallholder farming clearing (88 km^2), increasing landscape fragmentation and forest edges. Efforts to quantify canopy texture and their link to carbon storage had limited to no success. 
 
 Our analysis provides an insight in key spatial and temporal patterns of deforestation and reforestation at a multi-decadal scale and provide a historical context to land-cover and land-use change spatial patterns for past and ongoing field research in the area.
 
@@ -61,9 +61,10 @@ Our analysis provides an insight in key spatial and temporal patterns of defores
 
 ## Manuscript
 
-<div>
-  <iframe src="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
-</div>
+<object data="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf">
+    </embed>
+</object>
 
 ## Acknowledgements
 
