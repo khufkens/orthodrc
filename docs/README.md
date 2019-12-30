@@ -62,7 +62,7 @@ Our analysis provides an insight in key spatial and temporal patterns of defores
 ## Manuscript
 
 <div>
-  <iframe src="https://github.com/khufkens/orthodrc/raw/master/manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
+  <iframe src="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
 </div>
 
 ## Acknowledgements
