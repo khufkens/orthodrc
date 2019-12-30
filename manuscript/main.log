@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 DEC 2019 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  31 DEC 2019 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,19 +1089,19 @@ Package pdftex.def Info: ./figures/orthomosaic_maps.png  used on input line 570
 .
 (pdftex.def)             Requested size: 443.86319pt x 375.55759pt.
 [11] [12 <./figures/orthomosaic_maps.png>] [13]
-<./figures/visual_comparison_psp.png, id=345, 542.025pt x 274.626pt>
+<./figures/visual_comparison_psp.png, id=345, 1129.21875pt x 572.1375pt>
 File: ./figures/visual_comparison_psp.png Graphic file (type png)
 <use ./figures/visual_comparison_psp.png>
 Package pdftex.def Info: ./figures/visual_comparison_psp.png  used on input lin
 e 682.
-(pdftex.def)             Requested size: 443.86319pt x 224.89725pt.
-<./figures/foto_maps.png, id=346, 867.24pt x 867.24pt>
+(pdftex.def)             Requested size: 443.86319pt x 224.8962pt.
+<./figures/foto_maps.png, id=346, 3613.5pt x 3613.5pt>
 File: ./figures/foto_maps.png Graphic file (type png)
 <use ./figures/foto_maps.png>
 Package pdftex.def Info: ./figures/foto_maps.png  used on input line 709.
-(pdftex.def)             Requested size: 443.86319pt x 443.86128pt.
-[14 <./figures/visual_comparison_psp.png>] [15 <./figures/foto_maps.png (PNG co
-py)>] [16] [17] [18] (./main.bbl [19] [20] [21]
+(pdftex.def)             Requested size: 443.86319pt x 443.85687pt.
+[14 <./figures/visual_comparison_psp.png>] [15 <./figures/foto_maps.png>] [16] 
+[17] [18] (./main.bbl [19] [20] [21]
 Underfull \hbox (badness 4205) in paragraph at lines 522--528
 []\T1/ppl/m/n/9 (+20) Kadmon, R.; Harari-Kremer, R.  Study-ing Long-Term Veg-e-
 ta-tion Dy-nam-ics Us-ing Dig-i-tal
@@ -1162,7 +1162,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  26110 strings out of 492649
  449741 string characters out of 6129622
- 567149 words of memory out of 5000000
+ 567147 words of memory out of 5000000
  29035 multiletter control sequences out of 15000+600000
  62616 words of font info for 317 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1177,9 +1177,9 @@ e/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/20
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (23 pages, 10648921 bytes).
+Output written on main.pdf (23 pages, 5807863 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
+ 583 PDF objects out of 1000 (max. 8388607)
  525 compressed objects within 6 object streams
  148 named destinations out of 1000 (max. 500000)
  41186 words of extra memory for PDF output out of 42996 (max. 10000000)
