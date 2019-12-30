@@ -9,6 +9,13 @@
 # load required libraries
 library(raster)
 
+# download full resolution file from Zenodo repo
+# if the data does not exist (cloned project from github)
+if(!file.exists("data/orthomosaic/yangambi_orthomosaic_modified.tif")){
+download.file("download. https://zenodo.org/api/files/8039915b-30ea-4b2c-a799-04ef0aadf0ec/yangambi_orthomosaic.tif?versionId=7003f8f2-a826-496e-b4f1-698d2e89b76e",
+              "data/orthomosaic/yangambi_orthomosaic_modified.tif")
+}
+
 # read outline of the mosaic
 m <- raster("data/orthomosaic/yangambi_orthomosaic_mask_resampled.tif")
 
