@@ -5,7 +5,7 @@ Please cite code, data and the manuscript as:
 `Hufkens et al. 2020. Historical aerial surveys map long-term changes of
 forest cover and structure in the central Congo Basin. Submitted.`
 
-For full details on the methodology and results I refer to the above manuscript. To explore the data interactively I refer to the [the repository website](https://khufkens.github.io/orthodrc/).
+For full details on the methodology and results I refer to the above manuscript folder, the pdf as shown below. To explore the data interactively I refer to the [the repository website](https://khufkens.github.io/orthodrc/).
 
 ## Historical aerial surveys map long-term changes of forest cover and structure in the central Congo Basin
 
@@ -17,4 +17,11 @@ Primary forest in the orthomosaic was classified with a Convolutional Neural Net
 
 Our analysis provides an insight in key spatial and temporal patterns of deforestation and reforestation at a multi-decadal scale and provide a historical context to land-cover and land-use change spatial patterns for past and ongoing field research in the area.
 
-![](manuscript/figures/orthomosaic_maps.png)
+## Manuscript
+<div>
+  <iframe src="manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
+</div>
+
+## Acknowledgements
+
+This research was supported through the Belgian Science Policy office COBECORE project (BELSPO; grant BR/175/A3/COBECORE) and from the European Union Marie Skłodowska-Curie Action (project number 797668).
