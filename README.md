@@ -17,11 +17,6 @@ Primary forest in the orthomosaic was classified with a Convolutional Neural Net
 
 Our analysis provides an insight in key spatial and temporal patterns of deforestation and reforestation at a multi-decadal scale and provide a historical context to land-cover and land-use change spatial patterns for past and ongoing field research in the area.
 
-## Manuscript
-<div>
-  <iframe src="manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
-</div>
-
 ## Acknowledgements
 
 This research was supported through the Belgian Science Policy office COBECORE project (BELSPO; grant BR/175/A3/COBECORE) and from the European Union Marie Skłodowska-Curie Action (project number 797668).

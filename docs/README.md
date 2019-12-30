@@ -58,7 +58,12 @@ Our analysis provides an insight in key spatial and temporal patterns of defores
 
 <div id="map" style="width: 600px%; height: 600px; z-index:0;"></div>
 
----
+
+## Manuscript
+
+<div>
+  <iframe src="../manuscript/main.pdf" style="width:100%;height:700px;"></iframe>
+</div>
 
 ## Acknowledgements
 
