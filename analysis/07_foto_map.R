@@ -35,9 +35,9 @@ if(!file.exists("./data/geo-eye/geo-eye_panchromatic_latlon_resampled.tif")){
 }
 
 # aggregate (lower resolution for plotting)
-geoeye_r <- aggregate(geoeye_r, fact = 4)
+geoeye_r <- aggregate(geoeye_r, fact = 6)
 historical <- crop(historical, extent(geoeye_r))
-historical <- aggregate(historical, fact = 4)
+historical <- aggregate(historical, fact = 6)
 geoeye_r <- histMatch(geoeye_r, historical)
 
 # grab extent of the data and crop out locations
@@ -77,7 +77,8 @@ historical_map <- ggplot()+
   scale_fill_gradient(low = "black", high = "white") +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), colour = "white") +
+          aes(shape = type,
+              size = 3), stroke = 2, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
@@ -94,7 +95,7 @@ geoeye_map <- ggplot()+
   scale_fill_gradient(low = "black", high = "white") +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), colour = "white") +
+          aes(shape = type, size = 3), stroke = 2,colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
@@ -112,7 +113,7 @@ historical_foto_map <- ggplot()+
   scale_fill_identity() +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), colour = "white") +
+          aes(shape = type, size = 3), stroke = 2, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal()  +
   theme(legend.position="none",
@@ -130,7 +131,7 @@ geoeye_foto_map <- ggplot()+
   scale_fill_identity() +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), colour = "white") +
+          aes(shape = type, size = 3), stroke = 2, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
