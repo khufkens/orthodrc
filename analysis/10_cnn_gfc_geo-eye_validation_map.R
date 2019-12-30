@@ -55,16 +55,16 @@ spatial_map <- ggplot()+
   geom_tile(data = class_map,
             aes(x=x,y=y,fill=as.factor(val))) +
   scale_fill_brewer(palette = "Paired",
-                    labels=c("GFC + CNN",
-                             "GFC",
-                             "CNN",
-                             "forest")) +
+                    labels=c("non-forest (GFC + CNN)",
+                             "non-forest (GFC)",
+                             "non-forest (CNN)",
+                             "forest (GFC + CNN)")) +
   coord_fixed(ratio = 1) +
   theme_minimal() +
   theme(legend.title = element_blank(),
         legend.position="bottom",
         legend.direction="horizontal",
-        axis.text = element_text(size = 13),
+        axis.text = element_text(size = 8),
         axis.text.x = element_text(angle = 45, hjust = 1),
         panel.grid.major = element_line(colour="grey"),
         panel.grid.minor = element_line(colour="grey")) +

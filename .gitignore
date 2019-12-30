@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.Renviron
+.RData
+.Ruserdata
+data-raw/
+data/geo-eye/
+data/orthomosaic/yangambi_orthomosaic_modified.tif
