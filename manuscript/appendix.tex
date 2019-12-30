@@ -207,21 +207,26 @@ path & direction & image \# & start (H:M:S) & end (H:M:S)\\
 \includegraphics[width=31.25in,height=0.75\textheight]{./figures/visual_comparison_classifiers} \caption{CNN classifier results as run on a recent (2012) Geo-Eye panchromatic image. Results are compared with the Landsat based .}\label{fig:unnamed-chunk-9}
 \end{figure}
 
-\begin{table}[!h]
+\textbackslash{}begin\{table\}{[}!h{]}
 
-\caption{\label{tab:unnamed-chunk-10}Contingency table between the two forest / non-forest maps generated from a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network (CNN) generated and the Global Forest Cover map (Hansen et al. 2013).}
+\textbackslash{}caption\{\label{tab:unnamed-chunk-10}Contingency table
+in agreement (\%) between forest / non-forest classes as generated from
+a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network
+(CNN) generated and the Global Forest Cover map (Hansen et al.~2013).\}
 \centering
+
 \begin{tabular}[t]{lrr}
 \toprule
 \multicolumn{1}{c}{CNN} & \multicolumn{2}{c}{Global Forest Cover} \\
 \cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-3}
   & non-forest & forest\\
 \midrule
-non-forest & 0.10 & 0.09\\
-forest & 0.04 & 0.77\\
+non-forest & 10 & 9\\
+forest & 4 & 77\\
 \bottomrule
 \end{tabular}
-\end{table}
+
+\textbackslash{}end\{table\}
 
 
 \end{document}

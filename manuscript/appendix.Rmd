@@ -160,12 +160,12 @@ loss <- (hans <= 12) + (hans == 0)
 loss <- (loss > 1)
 
 ct <- crosstab(m, loss)
-ct <- round(ct/sum(ct),2)
+ct <- round(ct/sum(ct),2) * 100
 rownames(ct) <- c("non-forest","forest")
 
 ct %>%
    kable(
-    caption="Contingency table between the two forest / non-forest maps generated from a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network (CNN) generated and the Global Forest Cover map (Hansen et al. 2013).",
+    caption="Contingency table in agreement (%) between forest / non-forest classes as generated from a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network (CNN) generated and the Global Forest Cover map (Hansen et al. 2013).",
     booktabs = TRUE,
     col.names =  c("non-forest","forest")) %>%
   add_header_above(c("CNN" = 1, "Global Forest Cover" = 2)) %>%
