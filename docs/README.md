@@ -58,13 +58,6 @@ Our analysis provides an insight in key spatial and temporal patterns of defores
 
 <div id="map" style="width: 600px%; height: 600px; z-index:0;"></div>
 
-
-## Manuscript
-
-<object data="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://raw.githubusercontent.com/khufkens/orthodrc/master/manuscript/main.pdf"></embed>
-</object>
-
 ## Acknowledgements
 
 This research was supported through the Belgian Science Policy office COBECORE project (BELSPO; grant BR/175/A3/COBECORE) and from the European Union Marie Skłodowska-Curie Action (project number 797668).
