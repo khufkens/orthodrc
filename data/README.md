@@ -10,6 +10,4 @@ This folder contains all data used in the analysis and includes in various subfo
 
 ## Yangambi orthomosaic
 
-Within the context of the analysis the orthomosaic folder is the most important one. It contains the orthomosaic of the larger Yangambi region, the downsampled forest cover mask and the resulting forest cover change map (i.e. the difference with the contemporary Hansen et al. 2013 data). The digital elevation map used in composing the orthomosaic is also provided.
-
-Original Metashape files are listed in the `data-raw` folder while the final geo-referenced files end in *_modified.tif. All other data subfolders are used in the generation of figures in the paper or for the generation of the results in the orthomosaic folder (e.g. the Hansen et al. 2013 data).
+Within the context of the analysis the orthomosaic folder is the most important one. It contains the orthomosaic of the larger Yangambi region, the downsampled forest cover mask and the resulting forest cover change map (i.e. the difference with the contemporary Hansen et al. 2013 data).
