@@ -5,7 +5,7 @@ Please cite code, data and the manuscript as:
 `Hufkens et al. 2020. Historical aerial surveys map long-term changes of
 forest cover and structure in the central Congo Basin. Submitted.`
 
-For full details on the methodology and results I refer to the above manuscript folder. To explore the data interactively and read the manuscript I refer to the [the repository website](https://khufkens.github.io/orthodrc/).
+For full details on the methodology and results I refer to the above manuscript folder. To explore the data interactively and read the manuscript I refer to the [the repository website](https://khufkens.github.io/orthodrc/). All code is licensed under a AGPL-v3 open license, while the manuscript and data is licensed as CC-BY. Please be mindful of the license restrictions, as they will be enforced. 
 
 ## Historical aerial surveys map long-term changes of forest cover and structure in the central Congo Basin
 
