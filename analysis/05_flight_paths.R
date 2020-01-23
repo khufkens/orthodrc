@@ -60,12 +60,12 @@ r_map <- r_map +
   geom_sf(data = y_e,
           colour = "grey25",
           fill = NA,
-          size = 1) +
+          size = 0.8) +
   geom_sf(data = g_e,
           colour = "grey25",
           fill = NA,
           linetype = "dashed",
-          size = 1) +
+          size = 0.8) +
   geom_point(data = s,
              aes(x = lon,
                  y = lat,
@@ -79,13 +79,12 @@ r_map <- r_map +
 r_map <- r_map +
   theme_minimal() +
   theme(legend.position="none",
+        axis.text = element_text(size = 13),
+        axis.text.x = element_text(angle = 45, hjust = 1),
         panel.grid.major = element_line(colour="grey"),
-        panel.grid.minor = element_line(colour="grey")
-        ) +
-  labs(
-    x = expression("Longitude (" * degree * ")"),
-    y = expression("Latitude (" * degree * ")")
-  )
+        panel.grid.minor = element_line(colour="grey")) +
+  labs(x = "",
+       y = "")
 
 world <- ne_countries(scale='medium', returnclass = 'sf')
 drc <- subset(world, admin == "Democratic Republic of the Congo")
@@ -97,6 +96,8 @@ drc_inset <- ggplot(data = drc) +
   theme(legend.position = "none",
         axis.text.x = element_blank(),
         axis.text.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_rect(fill="white",
                                         colour = "grey25",
                                         size = 1.5)) +
@@ -119,4 +120,4 @@ r_map <- r_map +
 
 ggsave("manuscript/figures/flight_paths.png",
         width = 5,
-        dpi = 150)
+        dpi = 300)

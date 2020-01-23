@@ -110,66 +110,31 @@ flight_data %>%
 
 \pagebreak
 
-```{r echo=FALSE, out.width='100%', fig.cap="Overview of the complete flight plan of the survey around Kisangani (then Stanleyville) stored in the archives at the Africa Museum."}
+```{r echo=FALSE, out.width='100%', fig.align="center", fig.cap="Overview of the complete flight plan of the survey around Kisangani (then Stanleyville) stored in the archives at the Africa Museum."}
 knitr::include_graphics('./figures/flight_paths_overview.jpg')
 ```
 
-\pagebreak
-
-```{r echo=FALSE, out.height='75%', fig.cap="Overview of the complete flight plan meta-data as stored in the archives at the Africa Museum."}
+```{r echo=FALSE, out.height='75%', fig.align="center", fig.cap="Overview of the complete flight plan meta-data as stored in the archives at the Africa Museum."}
 knitr::include_graphics('./figures/flight_paths_meta_data.jpg')
 ```
 
-\pagebreak
+```{r echo=FALSE, out.height='75%', fig.align="center",fig.cap="Shelves with aerial survey images at the Africa Museum archives."}
+knitr::include_graphics('./figures/archives_aerial_photos_2.jpg')
+```
 
-```{r echo=FALSE, out.height='50%', fig.cap="Boxplots comparing the first principal component (PC1) of a site based FOTO analysis across different forest types for both contemporary (Geo-Eye) and historical orthomosaic data."}
+```{r echo=FALSE, out.height='50%', fig.align="center",fig.cap="Boxplots comparing the first principal component (PC1) of a site based FOTO analysis across different forest types for both contemporary (Geo-Eye) and historical orthomosaic data."}
 knitr::include_graphics('./figures/foto_bplot_psp.png')
 ```
 
-```{r echo = FALSE, out.width="75%", eval = TRUE, fig.cap="Scatterplot comparing Above Ground Carbon and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly "}
+```{r echo = FALSE, out.width="75%", fig.align="center",eval = TRUE, fig.cap="Scatterplot comparing Above Ground Carbon and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly "}
 knitr::include_graphics('./figures/foto_pc1_agc.png')
 ```
 
-```{r echo = FALSE, out.width="75%", eval = TRUE, fig.cap="Scatterplot comparing tree species richness and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly"}
+```{r echo = FALSE, out.width="75%", fig.align="center",eval = TRUE, fig.cap="Scatterplot comparing tree species richness and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly"}
 knitr::include_graphics('./figures/foto_pc1_diversity.png')
 ```
 
-```{r echo = FALSE, out.width="75%", eval = TRUE, fig.cap="Scatterplot comparing stem density (per ha) and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly"}
+```{r echo = FALSE, out.width="75%", fig.align="center",eval = TRUE, fig.cap="Scatterplot comparing stem density (per ha) and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly"}
 knitr::include_graphics('./figures/foto_pc1_stems.png')
-```
-
-\pagebreak
-
-```{r echo=FALSE, out.height='75%', fig.cap="CNN classifier results as run on a recent (2012) Geo-Eye panchromatic image. Results are compared with the Landsat based ."}
-knitr::include_graphics('./figures/visual_comparison_classifiers.png')
-```
-
-```{r echo = FALSE, eval = TRUE}
-# this data will not be available in the github repo due to missing geo-eye data
-
-# read in cnn forest mask
-m <- raster("../data/geo-eye/geo-eye_forest_mask_cnn.tif")
-
-# hansen
-hans <- raster("../data/Hansen_et_al/Hansen_GFC_lossyear_yangambi.tif")
-
-# read in Hansen map (get all forest loss before 2013)
-hans <- raster("../data/Hansen_et_al/Hansen_GFC_lossyear_yangambi.tif")
-hans <- crop(hans, extent(m))
-loss <- (hans <= 12) + (hans == 0)
-loss <- (loss > 1)
-
-ct <- crosstab(m, loss)
-ct <- round(ct/sum(ct),2) * 100
-rownames(ct) <- c("non-forest","forest")
-
-ct %>%
-   kable(
-    caption="Contingency table in agreement (%) between forest / non-forest classes as generated from a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network (CNN) generated and the Global Forest Cover map (Hansen et al. 2013).",
-    booktabs = TRUE,
-    col.names =  c("non-forest","forest")) %>%
-  add_header_above(c("CNN" = 1, "Global Forest Cover" = 2)) %>%
-  kable_styling(latex_options = c("hold_position"))
-
 ```
 

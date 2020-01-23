@@ -8,7 +8,7 @@ library(rgdal)
 img <- raster("./data/orthomosaic/yangambi_orthomosaic_modified.tif")
 
 # read in shapefile location digitized in QGIS
-loc <- readOGR("data/cnn/","cnn_data")
+loc <- readOGR("data/cnn/","sample_locations")
 
 # grab the cell values and convert to coordinates (row/col)
 cell_values <- extract(img, loc, cellnumbers = TRUE)[,'cells']

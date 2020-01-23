@@ -78,7 +78,7 @@ historical_map <- ggplot()+
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
           aes(shape = type,
-              size = 3), stroke = 2, colour = "white") +
+              size = 3), stroke = 1.5, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
@@ -95,7 +95,7 @@ geoeye_map <- ggplot()+
   scale_fill_gradient(low = "black", high = "white") +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), stroke = 2,colour = "white") +
+          aes(shape = type, size = 3), stroke = 1.5,colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
@@ -113,7 +113,7 @@ historical_foto_map <- ggplot()+
   scale_fill_identity() +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), stroke = 2, colour = "white") +
+          aes(shape = type, size = 3), stroke = 1.5, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal()  +
   theme(legend.position="none",
@@ -131,7 +131,7 @@ geoeye_foto_map <- ggplot()+
   scale_fill_identity() +
   coord_fixed(ratio = 1) +
   geom_sf(data = s,
-          aes(shape = type, size = 3), stroke = 2, colour = "white") +
+          aes(shape = type, size = 3), stroke = 1.5, colour = "white") +
   scale_shape_manual(values = c(0, 1, 2, 3, 4)) +
   theme_minimal() +
   theme(legend.position="none",
@@ -151,7 +151,7 @@ p <- plot_grid(historical_map,
                align = "hv",
                axis= "tblr",
                labels = c("A", "B", "C", "D"),
-               label_x = 0.9)
+               label_x = 0)
 
 save_plot("manuscript/figures/foto_maps.png",
           p,
@@ -218,10 +218,10 @@ p <- plot_grid(historical_map,
                align = "hv",
                axis= "tblr",
                labels = c("A", "B"),
-               label_x = 0.9)
+               label_x = 0)
 
 save_plot("manuscript/figures/visual_comparison_psp.png",
           p,
           base_width = 7.5,
           base_height = 3.8,
-          dpi = 150)
+          dpi = 310)

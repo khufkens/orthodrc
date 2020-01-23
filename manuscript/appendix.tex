@@ -27,7 +27,11 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
+% grffile has become a legacy package: https://ctan.org/pkg/grffile
+\IfFileExists{grffile.sty}{%
+\usepackage{grffile}
+}{}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -174,59 +178,67 @@ path & direction & image \# & start (H:M:S) & end (H:M:S)\\
 \pagebreak
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{./figures/flight_paths_overview} \caption{Overview of the complete flight plan of the survey around Kisangani (then Stanleyville) stored in the archives at the Africa Museum.}\label{fig:unnamed-chunk-3}
-\end{figure}
 
-\pagebreak
+{\centering \includegraphics[width=1\linewidth]{./figures/flight_paths_overview} 
 
-\begin{figure}
-\includegraphics[height=0.75\textheight]{./figures/flight_paths_meta_data} \caption{Overview of the complete flight plan meta-data as stored in the archives at the Africa Museum.}\label{fig:unnamed-chunk-4}
-\end{figure}
+}
 
-\pagebreak
-
-\begin{figure}
-\includegraphics[width=14.58in,height=0.5\textheight]{./figures/foto_bplot_psp} \caption{Boxplots comparing the first principal component (PC1) of a site based FOTO analysis across different forest types for both contemporary (Geo-Eye) and historical orthomosaic data.}\label{fig:unnamed-chunk-5}
+\caption{Overview of the complete flight plan of the survey around Kisangani (then Stanleyville) stored in the archives at the Africa Museum.}\label{fig:unnamed-chunk-3}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.75\linewidth]{./figures/foto_pc1_agc} \caption{Scatterplot comparing Above Ground Carbon and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly }\label{fig:unnamed-chunk-6}
+
+{\centering \includegraphics[width=82.67in,height=0.75\textheight]{./figures/flight_paths_meta_data} 
+
+}
+
+\caption{Overview of the complete flight plan meta-data as stored in the archives at the Africa Museum.}\label{fig:unnamed-chunk-4}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.75\linewidth]{./figures/foto_pc1_diversity} \caption{Scatterplot comparing tree species richness and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly}\label{fig:unnamed-chunk-7}
+
+{\centering \includegraphics[width=14.39in,height=0.75\textheight]{./figures/archives_aerial_photos_2} 
+
+}
+
+\caption{Shelves with aerial survey images at the Africa Museum archives.}\label{fig:unnamed-chunk-5}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.75\linewidth]{./figures/foto_pc1_stems} \caption{Scatterplot comparing stem density (per ha) and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly}\label{fig:unnamed-chunk-8}
-\end{figure}
 
-\pagebreak
+{\centering \includegraphics[width=14.58in,height=0.5\textheight]{./figures/foto_bplot_psp} 
+
+}
+
+\caption{Boxplots comparing the first principal component (PC1) of a site based FOTO analysis across different forest types for both contemporary (Geo-Eye) and historical orthomosaic data.}\label{fig:unnamed-chunk-6}
+\end{figure}
 
 \begin{figure}
-\includegraphics[width=31.25in,height=0.75\textheight]{./figures/visual_comparison_classifiers} \caption{CNN classifier results as run on a recent (2012) Geo-Eye panchromatic image. Results are compared with the Landsat based .}\label{fig:unnamed-chunk-9}
+
+{\centering \includegraphics[width=0.75\linewidth]{./figures/foto_pc1_agc} 
+
+}
+
+\caption{Scatterplot comparing Above Ground Carbon and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly }\label{fig:unnamed-chunk-7}
 \end{figure}
 
-\textbackslash{}begin\{table\}{[}!h{]}
+\begin{figure}
 
-\textbackslash{}caption\{\label{tab:unnamed-chunk-10}Contingency table
-in agreement (\%) between forest / non-forest classes as generated from
-a Geo-Eye 1 pan-chromatic image using a Convolutional Neural Network
-(CNN) generated and the Global Forest Cover map (Hansen et al.~2013).\}
-\centering
+{\centering \includegraphics[width=0.75\linewidth]{./figures/foto_pc1_diversity} 
 
-\begin{tabular}[t]{lrr}
-\toprule
-\multicolumn{1}{c}{CNN} & \multicolumn{2}{c}{Global Forest Cover} \\
-\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-3}
-  & non-forest & forest\\
-\midrule
-non-forest & 10 & 9\\
-forest & 4 & 77\\
-\bottomrule
-\end{tabular}
+}
 
-\textbackslash{}end\{table\}
+\caption{Scatterplot comparing tree species richness and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{./figures/foto_pc1_stems} 
+
+}
+
+\caption{Scatterplot comparing stem density (per ha) and the first principal component of the FOTO analysis for contemporary Geo-Eye (left) and the historical orthomosaic (right) data. Different forest types are plotted using closed circles, closed triangles, closed squares and this for fallow, mixed mon-dominant and young-regrowth forests, respectivelly}\label{fig:unnamed-chunk-9}
+\end{figure}
 
 
 \end{document}
