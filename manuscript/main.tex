@@ -509,11 +509,14 @@ at the start of 1958, 60 years earlier. In our analysis we only included
 \textbf{GFC} pixels which recorded no \textbf{forest} loss throughout
 the whole 2000 - 2018 period. As the resolution of the historical forest
 classification exceeds that of the GFC map we downsampled our historical
-forest cover data to 30m GFC resolution. We masked out all water bodies
-using the Global Forest Change survey data mask layer, and limited the
-analysis to the right bank of the Congo river. Where the datasets
-overlap we provide summary statistics of deforestation, reforestation
-and afforestation.
+forest cover data to 30 m GFC resolution \textbf{using a nearest
+neighbour approach}. We masked out all water bodies using the Global
+Forest Change survey data mask layer, and limited the analysis to the
+right bank of the Congo river. We provide summary statistics of
+historical and contemporary forest loss and regrowth.
+
+deforestation (persistent forest loss after 1958), reforestation
+(regrowth after loss in 1958).
 
 \hypertarget{landscape-fragmentation-above-ground-carbon-estimates}{%
 \subsubsection{Landscape fragmentation \& Above Ground Carbon
@@ -535,8 +538,8 @@ plot based averages of recent inventory data at permanent sampling plots
 in the area (Figure 2). We refer to \citet{Kearsley2013} for the survey
 method and allometric relations used to scale the survey data. Unlike
 standard square 1 ha plots edge plots were set back 200m from forest
-edges and were 50x200m, with the 50m side of the plot along the forest
-edge and continuing 200m into the forest (Appendix Table 1). We further
+edges and were 50x200 m, with the 50 m side of the plot along the forest
+edge and continuing 200 m into the forest (Appendix Table 1). We further
 confirmed that forest edge plots did not show a significantly different
 AGC compared to those of non-edged / mixed forest plots (Mann Whitney U
 test, p \textless{} 0.05). Thus it was not necessary to explicitly
@@ -545,7 +548,7 @@ mean values of the mixed forest as representative for potential AGC
 losses. Despite the challenges inherent in quantifying AGC for forest
 edges we mapped the total extent of the edges in the contemporary
 landscape. To align our landscape analysis with exploratory analysis of
-the survey data we used a buffer of 200m to estimate the extent of
+the survey data we used a buffer of 200 m to estimate the extent of
 forest edges and patches, up to the location of forest edge plots.
 
 Surveys of old plantations show a large variation in AGC, depending on
@@ -687,12 +690,12 @@ forest & 3.75 & 77.52 & 2.6 & 99.81 & 1.41 & 100.0\\
 Carbon}\label{long-term-lulc-changes-and-above-ground-carbon}}
 
 Scaling our classifier to the whole historical orthomosaic we detected
-\textbf{16200 ha} (or \textasciitilde{}20\% of the scene) of disturbed
-forests. A large fraction of the disturbed area was restored in the
-period between the two \textbf{acquisition periods}. In total,
-\textbf{9900 ha}, or little over half of the affected forest was
+\textbf{\textasciitilde{}16200 ha} (or \textasciitilde{}20\% of the
+scene) of disturbed forests. A large fraction of the disturbed area was
+restored in the period between the two \textbf{acquisition periods}. In
+total, \textbf{9918 ha}, or little over half of the affected forest was
 restored (Figure 5C-D, dark blue). Recent deforested areas, as
-registered through satellite remote sensing, approximate \textbf{8800 ha
+registered through satellite remote sensing, approximate \textbf{8776 ha
 (Table 3, Figure 6 - light green)}.
 
 Recent deforestation follows a distincly different pattern compared to
@@ -716,7 +719,7 @@ A comparison of forest edge plots with mixed forest plots showed no
 signficant difference in AGC, or other reported values such as species
 richness, basal area or stem density (Mann Whitney U test, p \textless{}
 0.05). Edge influence did not extend beyond 200 m from a forest edge,
-but still represented an area of \textbf{13200 ha}.
+but still represented an area of \textbf{13151 ha}.
 
 Changes in both land-use and land-cover led to concomitant changes in
 above ground carbon stocks. Recovery throughout the region was
@@ -899,7 +902,7 @@ value.}
 \textbf{Our approach uses broadly defined homogeneous polygons to
 construct a balanced dataset of synthethic landscapes. The methodology
 is analoguous to the use of sparse labelling as used by
-\citep{buscombe2018} and contrasts with the standard methodologies which
+\citet{buscombe2018} and contrasts with the standard methodologies which
 generally extract pixel (windows) \citep{song2015} or delineate land
 cover classes \citep{nita2018} to drive a classifier or analysis. More
 so, the use of heavy image augmentation during model training sidesteps
@@ -907,15 +910,15 @@ texture representation issues which affect classification of image
 scenes with inconsistent illumination or sharpness \citep{hudak1998} or
 ad-hoc feature engineering \citep{song2015}. The use of synthetic
 landscapes allowed us to account for most, but not all, of the
-variability within our orthomosaic. More so, our analysis has shown that
-despite being trained on historical data our model could map
-contemporary forest cover in remote sensing data with similar spatial
-and spectral characteristics (Figure 7), suggesting that the classifier
-consistently across works both space and time. We acknowledge that our
-approach will speed up labelling, but is limited by the available
-homogeneous areas to sample from and the number of classes. Yet, the
-latter should not be a constrained as previous research efforts have
-focussed on simple forest loss maps \citep{hansen2013}.}
+variability within our orthomosaic. Our analysis has shown that despite
+being trained on historical data our model could map contemporary forest
+cover in remote sensing data with similar spatial and spectral
+characteristics (Figure 7), suggesting that the classifier consistently
+across works both space and time. We acknowledge that the use of
+synthetic landscapes is limited by the available homogeneous areas to
+sample from and the number of classes. Yet, the latter should not be a
+constrained as previous research efforts have focussed on simple forest
+loss maps \citep{hansen2013}.}
 
 \hypertarget{research-context}{%
 \subsection{Research context}\label{research-context}}
@@ -925,9 +928,9 @@ focussed on simple forest loss maps \citep{hansen2013}.}
 Carbon}\label{land-use-land-cover-change-above-ground-carbon}}
 
 Our analysis shows that the majority of deforestation around Yangambi
-happened toward the late 1950's (\textbf{16200 ha}). Considerable
-regrowth has occured since the aerial survey was executed
-(\textbf{\textasciitilde{}9900 ha}), and socio-economic instability
+happened toward the late 1950's (\textbf{\textasciitilde{}16200 ha}).
+Considerable regrowth has occured since the aerial survey was executed
+(\textbf{\textasciitilde{}9918 ha}), and socio-economic instability
 prevented further large scale forest exploitation. In particular, many
 plantations have reached maturity and forest has re-established in
 previously cleared or disturbed areas. The majority of this forest
@@ -943,7 +946,7 @@ effects in the Amazon forest. Due to a lack of data on the extent
 not include any estimates of carbon loss or gain within these zones.
 However, it must be stated that the influence of edges throughout the
 landscape was not marginal. as these areas would account for
-\textbf{13200 ha}. Thus edges could have a substantial negative
+\textbf{13151 ha}. Thus edges could have a substantial negative
 \citep{brinck2017} or positive \citep{reinmann2017} influence on AGC.
 Similarly, uncertainties in how to explicitly correct for plantations in
 the landscape present a further challenge. Thus although our estimates
@@ -1019,16 +1022,16 @@ ensure optimal data quality in resolution, contrast and sharpness.
 
 Given the impact of tropical forest disturbances on atmospheric
 CO\textsubscript{2} emissions, biodiversity and ecosystem productivity
-accurate long term reporting on land-cover and land-use change
-especially in the pre-satellite era is an imperative. Our analysis of
-historical aerial survey images of the Central Congo Basin provides a
-window into the state of the forest at the start of the anthropocene.
-Efforts to quantify canopy texture and their link to carbon storage had
-limited to no success.We have shown that historical aerial survey data
-can be used to quantify land-use and land-cover change using a highly
-automated workflow to quantify the structure and extent of forest cover
-change that can help assess the impact of fragmentation on above ground
-carbon stocks. We also show a shift from previously highly structured
+accurate long term reporting on land-cover and land-use change in the
+pre-satellite era is an imperative. Our analysis of historical aerial
+survey images of the Central Congo Basin provides a window into the
+state of the forest at the start of the anthropocene. Efforts to
+quantify canopy texture and their link to carbon storage had limited to
+no success. We have shown that historical aerial survey data can be used
+to quantify land-use and land-cover change using a highly automated
+workflow to quantify the structure and extent of forest cover change
+that can help assess the impact of fragmentation on above ground carbon
+stocks. We also show a shift from previously highly structured
 industrial deforestation of large areas \textbf{for plantation
 purposes}, to discrete smallholder clearing for farming, increasing
 landscape fragmentation but also opportuntiy for substantial regrowth.
