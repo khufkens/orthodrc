@@ -186,33 +186,33 @@ ongoing forest research in the area.}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Tropical ecosystem services are severely impacted by deforestation and
-forest degradation \citep{hansen2013, houghton2012, tyukavina2015}. Not
-only does tropical forest Land-Use and Land-Cover Change (LULCC)
-constitute 10 to 15\% of the total global carbon emissions
-\citep{vanderwerf2009}, changes in forest fragmentation affect the
-forest structure and function
+\textbf{Tropical ecosystem services are severely impacted by
+deforestation and forest degradation
+\citep{hansen2013, houghton2012, tyukavina2015}. Not only does tropical
+forest Land-Use and Land-Cover Change (LULCC) constitute 10 to 15\% of
+the total global carbon emissions \citep{vanderwerf2009}, changes in
+forest fragmentation affect the forest structure and function
 \citep{fauset2017, brinck2017, didham1999}. Strong fragmentation effects
 decreases the number of large trees along forest edges
 \citep{laurance2000, magnago2015}, while species composition and
 biodiversity are equally negatively affected
 \citep{poorter2006, barlow2016, vandeperre2018}. Estimates show that
 31\% of carbon emissions are caused by edge effects alone
-\citep{brinck2017}.
+\citep{brinck2017}.}
 
-Accurate estimates of LULCC and forest canopy structure are therefore
-imperative to estimate carbon emissions and other ecosystem services
-\citep{houghton2012, hansen2013}. Remote sensing products have been key
-inputs in LULCC assessments as they provide accurate spatial information
-to help estimate carbon emissions \citep{mitchard2018, hansen2013}. More
-so, high resolution aerial images provide scientists tools to monitor
-forest extent, structure and carbon emissions as canopy texture is
-linked to above ground biomass
+\textbf{Accurate estimates of LULCC and forest canopy structure are
+therefore imperative to estimate carbon emissions and other ecosystem
+services \citep{houghton2012, hansen2013}. Remote sensing products have
+been key inputs in LULCC assessments as they provide accurate spatial
+information to help estimate carbon emissions
+\citep{mitchard2018, hansen2013}. More so, high resolution aerial images
+provide scientists tools to monitor forest extent, structure and carbon
+emissions as canopy texture is linked to above ground biomass
 \citep{Ploton2012, Couteron2005, Barbier2010}. Yet, most of these
 estimates are limited in time to recent decades
-\citep{defries2002, houghton2012, hansen2013, achard2014}.
+\citep{defries2002, houghton2012, hansen2013, achard2014}.}
 
-Historical estimates \textbf{of Land-Use and Land-Cover (LULC)}, in the
+\textbf{Historical estimates of Land-Use and Land-Cover (LULC), in the
 pre-satellite era (\textless{} 1972), exist but generally rely on
 non-spatially explicit data (i.e socio-economic data)
 \citep{houghton2012, ramankutty1999, defries2002, sader1988}. Efforts
@@ -224,11 +224,11 @@ the African continent is less common, inaccessible or both. Some studies
 do exist, as \citet{buitenwerf2012} and \citet{hudak1998} used aerial
 survey images to map vegetation changes in South African savannas,
 whilst \citet{frankl2015} and \citet{nyssen2016} mapped the Ethiopian
-highlands of 1930's.
+highlands of 1930's.}
 
-Across the central Congo Basin most of these historical images were
-collected within the context of national cartographic efforts by the
-``Institut Géographique du Congo Belge'' in Kinshasa (then
+\textbf{Across the central Congo Basin most of these historical images
+were collected within the context of national cartographic efforts by
+the ``Institut Géographique du Congo Belge'' in Kinshasa (then
 Léopoldville), DR Congo. Despite the existence of large archives of
 aerial survey imagery (Figure 1, Appendix Figure 3), as of yet, no
 studies have valorized these data. The lack of a consistent valorization
@@ -239,9 +239,9 @@ an increasing pace \citep{butsic2015}. Given the impact of LULCC on the
 structure and functioning of central African tropical forests, and their
 influence on both carbon dynamics \citep{Kearsley2013} and biodiversity
 \citep{vandeperre2018}, accurate long term reporting of historical
-forest cover warrants more attention \citep{willcock2016}.
+forest cover warrants more attention \citep{willcock2016}.}
 
-Here, we use a combination of historical aerial photography and
+\textbf{Here, we use a combination of historical aerial photography and
 contemporary remote sensing data to map long-term changes in the extent
 and structure of the tropical forest surrounding Yangambi (DR Congo), in
 the central Congo Basin, effectively linking the start of the
@@ -250,21 +250,21 @@ and remains, a focal center of forest and agricultural research and
 development in the central Congo Basin. Past research in the region
 allows for thorough assessment of land-use and land-cover change from a
 multi-disciplinary point of view, confronting us with complex
-deforestation and land-use patterns.
+deforestation and land-use patterns.}
 
-We leverage Structure-from-Motion to generate a large orthomosaic of
-historical imagery and develop a Convolutional Neural Network based
-forest cover mapping approach, based upon a semi-supervised generated
-dataset extensively leveraging data augmentation. Our methodology aims
-to provides a historical insight into important LULCC spatial patterns
-in Yangambi, such as fragmentation and edge complexity. We further
-contextualize the influence of changes in the forest's life history on
-past and current research into Above Ground Carbon (AGC) storage
-\citep{Kearsley2013} and biodiversity \citep{vandeperre2018} in the
-central Congo Basin. Our fast scalable mapping approach for historical
-aerial survey data, using limited supervised input, would further
-support long-term land-use and land-cover change analysis across the
-central Congo Basin.
+\textbf{We leverage Structure-from-Motion to generate a large
+orthomosaic of historical imagery and develop a Convolutional Neural
+Network based forest cover mapping approach, based upon a
+semi-supervised generated dataset extensively leveraging data
+augmentation. Our methodology aims to provides a historical insight into
+important LULCC spatial patterns in Yangambi, such as fragmentation and
+edge complexity. We further contextualize the influence of changes in
+the forest's life history on past and current research into Above Ground
+Carbon (AGC) storage \citep{Kearsley2013} and biodiversity
+\citep{vandeperre2018} in the central Congo Basin. Our fast scalable
+mapping approach for historical aerial survey data, using limited
+supervised input, would further support long-term land-use and
+land-cover change analysis across the central Congo Basin.}
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
@@ -416,14 +416,15 @@ locations close to the polygon border at times contained mixed cover
 types. Tiles with mixed cover types were removed from the list of source
 tiles (Table 1).} Homogeneous \textbf{source} tiles were combined in
 synthetic landscapes using a random gaussian field based binary mask
-(Figure 3). We generated 5000 synthetic landscapes for training, while
-500 landscapes were generated for both the validation and the testing
-datasets for a total of 6000 synthetic landscapes. In order to limit
-stitch line misclassifications, along the seams of mosaicked images, we
-created synthetic landscapes with different forest tiles to mimick
-forest texture transitions. We applied this technique to 10\% of the
-generated synthetic landscapes \textbf{(across training, validation and
-testing data)}.
+(Figure 3). We generated 5000 synthetic landscapes \textbf{(balancing
+forest and non-forest classes)} for training, while 500 landscapes were
+generated for both the validation and the testing datasets for a total
+of 6000 synthetic landscapes. In order to limit stitch line
+misclassifications, along the seams of mosaicked images, we created
+synthetic landscapes with different forest tiles to mimick forest
+texture transitions. We applied this technique to 10\% of the generated
+synthetic landscapes \textbf{(across training, validation and testing
+data)}.
 
 \begin{table}[!h]
 
@@ -521,9 +522,18 @@ forest loss and regrowth. \textbf{We map persistent forest loss after
 estimates}\label{landscape-fragmentation-above-ground-carbon-estimates}}
 
 To quantify changes in the structure of forest cover and its
-disturbances we used spatial pattern analysis landscape fragmentation
-metrics \citep{dale1999}. We report the ratio of edge to area and the
-fractal index to quantify landscape complexity of forest disturbances.
+disturbances we used spatial pattern analysis landscape (fragmentation)
+metrics \citep{dale1999}. \textbf{Landscape metrics provide a
+mathematical framework for the analysis of discrete land‐cover classes
+and allows us to capture their composition and configuration. These
+metrics are therefore commonly used to compare how landscapes change
+over time \citep{hesselbarth2019}. In particular, fractals provide a way
+to quantify complex natural landscapes, including their self-similarity,
+across scales \citep{Li2000, Mandelbrot1977}} We report the ratio of
+edge to area and the fractal dimension to quantify landscape complexity
+of forest disturbances. \textbf{A fractal dimension closer to 2 suggest
+a more complex (fragmented) landscape.}
+
 Statistics were calculated for all forest disturbance patches larger
 than 1 ha and smaller than the 95\textsuperscript{th} percentile of the
 patch size distribution using the R package landscapemetrics
@@ -956,8 +966,8 @@ Over the past half century there has been a clear shift in land use in
 Yangambi (Figure 5). Land use has shifted away from for example a
 regular fishbone deforestation pattern that emerges when (large scale)
 agricultural interests dominate the landscape \citep{arima2015}, to a
-more fragmented landscape (Figure 5D). The latter former? is consistent
-with historical land management at the time of the aerial survey
+more fragmented landscape (Figure 5D). The former is consistent with
+historical land management at the time of the aerial survey
 \citep{bustillo2018}. These regular patterns have since been reversed
 because of a decrease in large scale intensive agriculture, replaced by
 ad-hoc small scale subsistence farming with large perimeter to area
@@ -1018,26 +1028,26 @@ sharpness.
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 
-Given the impact of tropical forest disturbances on atmospheric carbon
-emissions, biodiversity and ecosystem productivity accurate long term
-reporting of LULCC is an imperative. Our analysis of historical aerial
-survey images (1958) of the Central Congo Basin provides a window into
-the state of the forest at the start of the anthropocene. The use of a
-CNN based LULC classifier, using synthetic landscapes based image
+\textbf{Given the impact of tropical forest disturbances on atmospheric
+carbon emissions, biodiversity and ecosystem productivity accurate long
+term reporting of LULCC is an imperative. Our analysis of historical
+aerial survey images (1958) of the Central Congo Basin provides a window
+into the state of the forest at the start of the anthropocene. The use
+of a CNN based LULC classifier, using synthetic landscapes based image
 augmentation, provides a robust semi-supervised solution which scales
 across space and time, even for image scenes with inconsistent
 illumination or sharpness. Combined with contemporary remote sensing
 data we have shown that historical aerial survey data can be used to
 quantify long-term changes in LULC and AGC. We showed a shift from
-previously highly structured industrial deforestation of large areas
-\textbf{for plantation purposes}, to discrete smallholder clearing for
-farming, increasing landscape fragmentation but also opportunties for
-substantial regrowth. Efforts to quantify canopy texture features and
-their link to AGC had limited to no success. Our analysis provides
-insights into the rate at which deforestation and reforestation has
-taken place over a multi-decadal scale in the central Congo basin. As
-such, it provides a useful historical context while interpreting past
-and ongoing forest research in the area.
+previously highly structured industrial deforestation of large areas for
+plantation purposes, to discrete smallholder clearing for farming,
+increasing landscape fragmentation but also opportunties for substantial
+regrowth. Efforts to quantify canopy texture features and their link to
+AGC had limited to no success. Our analysis provides insights into the
+rate at which deforestation and reforestation has taken place over a
+multi-decadal scale in the central Congo basin. As such, it provides a
+useful historical context while interpreting past and ongoing forest
+research in the area.}
 
 \hypertarget{additional-information-and-declarations}{%
 \section{Additional Information and

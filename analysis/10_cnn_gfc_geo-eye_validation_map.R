@@ -85,6 +85,11 @@ spatial_map <- ggplot()+
                              "non-forest (CNN)",
                              "forest (GFC + CNN)")) +
   coord_fixed(ratio = 1) +
+  geom_sf(data = cloud_mask,
+          colour = "white",
+          fill = NA,
+          lty = 1,
+          size = 0.8) +
   geom_sf(data = box,
           colour = "white",
           fill = NA,
