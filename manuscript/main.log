@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.10)  23 JAN 2020 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.10)  24 JAN 2020 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -888,38 +888,38 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 18
-5.
+3.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 185.
-LaTeX Info: Redefining \microtypecontext on input line 185.
+(lastpage)             ! on input line 183.
+LaTeX Info: Redefining \microtypecontext on input line 183.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 185.
+LaTeX Info: Redefining \showhyphens on input line 183.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -927,7 +927,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 185.
+Package hyperref Info: Link coloring ON on input line 183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/oberdiek/refcount.sty
@@ -937,9 +937,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count192
 )
-LaTeX Info: Redefining \ref on input line 185.
-LaTeX Info: Redefining \pageref on input line 185.
-LaTeX Info: Redefining \nameref on input line 185.
+LaTeX Info: Redefining \ref on input line 183.
+LaTeX Info: Redefining \pageref on input line 183.
+LaTeX Info: Redefining \nameref on input line 183.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -988,54 +988,54 @@ Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \celsius on input line 185.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 185
+LaTeX Info: Redefining \celsius on input line 183.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 183
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 185.
-Package gensymb Info: Using \upOmega for \ohm on input line 185.
+LaTeX Info: Redefining \ohm on input line 183.
+Package gensymb Info: Using \upOmega for \ohm on input line 183.
 
 Package gensymb Warning: Not defining \micro.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 183.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pm' on input line 185.
+(hyperref)                removing `\pm' on input line 183.
 
 <logo-mdpi.pdf, id=123, 86.3225pt x 57.21375pt>
 File: logo-mdpi.pdf Graphic file (type pdf)
 <use logo-mdpi.pdf>
-Package pdftex.def Info: logo-mdpi.pdf  used on input line 185.
+Package pdftex.def Info: logo-mdpi.pdf  used on input line 183.
 (pdftex.def)             Requested size: 42.92798pt x 28.45274pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <18> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 185.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 183.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-85.
+83.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-185.
+183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-185.
+183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-185.
+183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-185.
+183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1044,36 +1044,36 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 185.
+(Font)              scaled to size 10.42007pt on input line 183.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 185.
+(Font)              scaled to size 7.91925pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 185.
+(Font)              scaled to size 6.25204pt on input line 183.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 185.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 183.
 <logo-orcid.pdf, id=125, 597.23125pt x 845.1575pt>
 File: logo-orcid.pdf Graphic file (type pdf)
 <use logo-orcid.pdf>
-Package pdftex.def Info: logo-orcid.pdf  used on input line 185.
+Package pdftex.def Info: logo-orcid.pdf  used on input line 183.
 (pdftex.def)             Requested size: 9.10509pt x 12.88315pt.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 185.
+(Font)              scaled to size 9.37807pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 185.
+(Font)              scaled to size 7.29405pt on input line 183.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 185.
+(Font)              scaled to size 5.21004pt on input line 183.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 185.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 183.
 <logo-updates.pdf, id=128, 832.75539pt x 281.85541pt>
 File: logo-updates.pdf Graphic file (type pdf)
 <use logo-updates.pdf>
-Package pdftex.def Info: logo-updates.pdf  used on input line 185.
+Package pdftex.def Info: logo-updates.pdf  used on input line 183.
 (pdftex.def)             Requested size: 50.43332pt x 17.07182pt.
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-85.
+83.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1085,89 +1085,89 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {/home/khufkens/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo-
 mdpi.pdf> <./logo-orcid.pdf> <./logo-updates.pdf>] [2]
-<./figures/print_examples.jpg, id=246, 38.544pt x 18.63963pt>
+<./figures/print_examples.jpg, id=245, 38.544pt x 18.63963pt>
 File: ./figures/print_examples.jpg Graphic file (type jpg)
 <use ./figures/print_examples.jpg>
-Package pdftex.def Info: ./figures/print_examples.jpg  used on input line 301.
+Package pdftex.def Info: ./figures/print_examples.jpg  used on input line 300.
 (pdftex.def)             Requested size: 332.89738pt x 161.03963pt.
-<./figures/flight_paths.png, id=247, 361.35pt x 505.89pt>
+<./figures/flight_paths.png, id=246, 361.35pt x 505.89pt>
 File: ./figures/flight_paths.png Graphic file (type png)
 <use ./figures/flight_paths.png>
-Package pdftex.def Info: ./figures/flight_paths.png  used on input line 313.
+Package pdftex.def Info: ./figures/flight_paths.png  used on input line 312.
 (pdftex.def)             Requested size: 332.89738pt x 466.05742pt.
 [3] [4 <./figures/print_examples.jpg>] [5 <./figures/flight_paths.png (PNG copy
 )>] [6]
-<./figures/synthetic_landscape.png, id=296, 1178.4025pt x 602.25pt>
+<./figures/synthetic_landscape.png, id=295, 1178.4025pt x 602.25pt>
 File: ./figures/synthetic_landscape.png Graphic file (type png)
 <use ./figures/synthetic_landscape.png>
 Package pdftex.def Info: ./figures/synthetic_landscape.png  used on input line 
-445.
+444.
 (pdftex.def)             Requested size: 443.86319pt x 226.84485pt.
 <./figures/cnn_diagram.pdf, id=299, 671.6292pt x 202.8378pt>
 File: ./figures/cnn_diagram.pdf Graphic file (type pdf)
 <use ./figures/cnn_diagram.pdf>
-Package pdftex.def Info: ./figures/cnn_diagram.pdf  used on input line 468.
+Package pdftex.def Info: ./figures/cnn_diagram.pdf  used on input line 467.
 (pdftex.def)             Requested size: 443.86319pt x 134.04977pt.
 [7 <./figures/synthetic_landscape.png>] [8 <./figures/cnn_diagram.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cnn_diagram.pdf): PDF inclusion: inval
 id other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >] [9]
-<./figures/orthomosaic_maps.png, id=348, 4215.75pt x 3312.375pt>
+<./figures/orthomosaic_maps.png, id=350, 4215.75pt x 3312.375pt>
 File: ./figures/orthomosaic_maps.png Graphic file (type png)
 <use ./figures/orthomosaic_maps.png>
-Package pdftex.def Info: ./figures/orthomosaic_maps.png  used on input line 625
+Package pdftex.def Info: ./figures/orthomosaic_maps.png  used on input line 622
 .
 (pdftex.def)             Requested size: 443.86319pt x 348.74469pt.
 [10] [11 <./figures/orthomosaic_maps.png>]
-<./figures/forest_cover_map.png, id=362, 3914.625pt x 3312.375pt>
+<./figures/forest_cover_map.png, id=365, 3914.625pt x 3312.375pt>
 File: ./figures/forest_cover_map.png Graphic file (type png)
 <use ./figures/forest_cover_map.png>
-Package pdftex.def Info: ./figures/forest_cover_map.png  used on input line 672
+Package pdftex.def Info: ./figures/forest_cover_map.png  used on input line 669
 .
 (pdftex.def)             Requested size: 443.86319pt x 375.53232pt.
-<./figures/visual_comparison_classifiers.png, id=363, 939.51pt x 433.62pt>
+<./figures/visual_comparison_classifiers.png, id=366, 939.51pt x 433.62pt>
 File: ./figures/visual_comparison_classifiers.png Graphic file (type png)
 <use ./figures/visual_comparison_classifiers.png>
 Package pdftex.def Info: ./figures/visual_comparison_classifiers.png  used on i
-nput line 681.
+nput line 678.
 (pdftex.def)             Requested size: 443.86319pt x 204.86006pt.
 [12] [13 <./figures/forest_cover_map.png>] [14 <./figures/visual_comparison_cla
 ssifiers.png (PNG copy)>]
-<./figures/visual_comparison_psp.png, id=384, 542.025pt x 274.626pt>
+<./figures/visual_comparison_psp.png, id=387, 542.025pt x 274.626pt>
 File: ./figures/visual_comparison_psp.png Graphic file (type png)
 <use ./figures/visual_comparison_psp.png>
 Package pdftex.def Info: ./figures/visual_comparison_psp.png  used on input lin
-e 792.
+e 789.
 (pdftex.def)             Requested size: 443.86319pt x 224.89725pt.
 [15 <./figures/visual_comparison_psp.png>]
-<./figures/foto_maps.png, id=393, 867.24pt x 867.24pt>
+<./figures/foto_maps.png, id=396, 867.24pt x 867.24pt>
 File: ./figures/foto_maps.png Graphic file (type png)
 <use ./figures/foto_maps.png>
-Package pdftex.def Info: ./figures/foto_maps.png  used on input line 825.
+Package pdftex.def Info: ./figures/foto_maps.png  used on input line 822.
 (pdftex.def)             Requested size: 443.86319pt x 443.86128pt.
 [16] [17 <./figures/foto_maps.png (PNG copy)>] [18] [19] [20] (./main.bbl [21] 
 [22] [23]
-Underfull \hbox (badness 4205) in paragraph at lines 435--441
+Underfull \hbox (badness 4205) in paragraph at lines 438--444
 []\T1/ppl/m/n/9 (+20) Kadmon, R.; Harari-Kremer, R.  Study-ing Long-Term Veg-e-
 ta-tion Dy-nam-ics Us-ing Dig-i-tal
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 470--476
+Underfull \hbox (badness 1789) in paragraph at lines 473--479
 []\T1/ppl/m/n/9 (+20) Simini, F.; An-fodillo, T.; Car-rer, M.; Ba-navar, J.R.; 
 Mar-i-tan, A.  Self-similarity and scal-ing
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 470--476
+Underfull \hbox (badness 1596) in paragraph at lines 473--479
 \T1/ppl/m/n/9 (+20) in for-est com-mu-ni-ties.  \T1/ppl/m/it/9 (+20) Pro-ceed-i
 ngs of the Na-tional Academy of Sci-ences \T1/ppl/b/n/9 2010\T1/ppl/m/n/9 (+20)
  , \T1/ppl/m/it/9 (+20) 107\T1/ppl/m/n/9 (+20) , 7658--7662.
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 483--489
+Underfull \hbox (badness 1024) in paragraph at lines 486--492
 \T1/ppl/m/n/9 (+20) Im-pli-ca-tions for mea-sur-ing lat-eral chan-nel move-ment
  in a GIS.  \T1/ppl/m/it/9 (+20) Ge-o-mor-phol-ogy \T1/ppl/b/n/9 2006\T1/ppl/m/
 n/9 (+20) , \T1/ppl/m/it/9 (+20) 74\T1/ppl/m/n/9 (+20) , 1--16.
@@ -1175,46 +1175,46 @@ n/9 (+20) , \T1/ppl/m/it/9 (+20) 74\T1/ppl/m/n/9 (+20) , 1--16.
 
 [24])
 LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 1
-149.
+146.
 (/home/khufkens/.TinyTeX/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1149.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1146.
 
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 4441) in paragraph at lines 1149--1149
+Underfull \hbox (badness 4441) in paragraph at lines 1146--1146
   [] \T1/ppl/m/n/9 (+20) 2020 by the au-thors. Sub-mit-ted to \T1/ppl/m/it/9 (+
 20) Re-mote Sens. \T1/ppl/m/n/9 (+20) for pos-si-ble open ac-cess pub-li-ca-tio
 n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1146
 \T1/ppl/m/n/9 (+20) un-der the terms and con-di-tions of the Cre-ative Com-mons
  At-tri-bu-tion (CC BY) li-cense
  []
 
 [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1149.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1149.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1146.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1149.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1146.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 00F98C048D8A03E4534D5084C732E594;5824.
+(rerunfilecheck)             Checksum: 1E6B51E7765F82076E3209AC131A088A;5744.
  ) 
 Here is how much of TeX's memory you used:
- 27721 strings out of 494108
- 476931 string characters out of 6173253
- 600505 words of memory out of 5000000
- 30764 multiletter control sequences out of 15000+600000
- 64766 words of font info for 325 fonts, out of 8000000 for 9000
+ 27731 strings out of 494108
+ 477056 string characters out of 6173253
+ 599654 words of memory out of 5000000
+ 30767 multiletter control sequences out of 15000+600000
+ 65076 words of font info for 329 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,14n,64p,2390b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,14n,64p,2390b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/khufkens/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0500.600p
 k>{/home/khufkens/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}</home/khufke
 ns/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></home/khufke
@@ -1225,10 +1225,10 @@ inyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></home/khufkens/.TinyT
 eX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></home/khufkens/.TinyTeX/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></home/khufkens/.TinyTeX/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (25 pages, 17785117 bytes).
+Output written on main.pdf (25 pages, 17784344 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
- 169 named destinations out of 1000 (max. 500000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 607 compressed objects within 7 object streams
+ 170 named destinations out of 1000 (max. 500000)
  41265 words of extra memory for PDF output out of 42996 (max. 10000000)
 
