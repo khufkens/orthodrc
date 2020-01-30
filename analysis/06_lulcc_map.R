@@ -72,10 +72,10 @@ orthomosaic_subset_df <- orthomosaic_subset %>%
 forest_change_map <- ggplot()+
   geom_tile(data = forest_change_df, aes(x=x,y=y,fill=as.factor(val))) +
   scale_fill_brewer(palette = "Paired",
-                    labels=c(" no change",
-                             " forest regrowth > 1958",
-                             " forest loss > 2000",
-                             " forest loss > 1958")) +
+                    labels=c(" permanent forest cover",
+                             " reforestation >1958",
+                             " deforestation >2000",
+                             " deforestation >1958 (permanent)")) +
   coord_fixed(ratio = 1) +
   geom_sf(data = bb, colour = "white", fill = NA, size = 0.8) +
   ylim(c(0.725,1.07)) +
@@ -92,16 +92,17 @@ forest_change_subset_map <- ggplot()+
   geom_tile(data = forest_change_subset_df,
             aes(x=x,y=y,fill=as.factor(val))) +
   scale_fill_brewer(palette = "Paired",
-                    labels=c(" no change",
-                             " forest regrowth > 1958",
-                             " forest loss > 2000",
-                             " forest loss > 1958")) +
+                    labels=c(" permanent forest cover",
+                             " reforestation >1958",
+                             " deforestation >2000",
+                             " deforestation >1958 (permanent)")) +
   coord_fixed(ratio = 1) +
   geom_sf(data = bb, colour = NA, fill = NA) +
   theme_minimal() +
   theme(legend.title = element_blank(),
         legend.position="bottom",
         legend.direction="horizontal",
+        legend.text = element_text(size = 13),
         axis.text = element_text(size = 13),
         axis.text.x = element_text(angle = 45, hjust = 1),
         panel.grid.major = element_line(colour="grey"),
@@ -155,8 +156,10 @@ qa_map <- ggplot()+
   guides(fill = "legend", lty = "none") +
   theme(legend.position="bottom",
         legend.direction = "horizontal",
+        legend.text = element_text(size = 13),
         axis.text = element_text(size = 13),
         axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.y = element_blank(),
         panel.grid.major = element_line(colour="grey"),
         panel.grid.minor = element_line(colour="grey")) +
   labs(
@@ -171,7 +174,7 @@ orthomosaic_subset_map <- ggplot()+
   theme_minimal() +
   theme(legend.position="none",
         axis.text = element_text(size = 13),
-        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.x = element_blank(),
         panel.grid.major = element_line(colour="grey"),
         panel.grid.minor = element_line(colour="grey")) +
   labs(
@@ -179,7 +182,7 @@ orthomosaic_subset_map <- ggplot()+
     y = "")
 
 p1 <- plot_grid(orthomosaic_subset_map,
-               forest_change_subset_map,
+               forest_change_subset_map + theme(legend.position = "none"),
                nrow = 2,
                align = "hv",
                axis= "tblr",
@@ -191,22 +194,33 @@ p2 <- plot_grid(forest_change_map,
                 axis= "tblr",
                 labels = c("A", ""))
 
+p_cover <- plot_grid(
+  p2,
+  get_legend(forest_change_subset_map),
+  nrow = 2,
+  rel_heights = c(1, .1))
+
 p3 <- plot_grid(orthomosaic_map,
-                qa_map,
+                qa_map + theme(legend.position = "none"),
                 nrow=1,
                 align = "hv",
                 axis= "tblr",
                 labels = c("A", "B")
                 )
 
+p_ortho <- plot_grid(p3,
+               get_legend(qa_map),
+               nrow = 2,
+               rel_heights = c(1, .1))
+
 save_plot("manuscript/figures/forest_cover_map.png",
-          p2,
+          p_cover,
           base_height = 11,
           base_width = 13,
           dpi = 300)
 
 save_plot("manuscript/figures/orthomosaic_maps.png",
-          p3,
+          p_ortho,
           base_height = 11,
-          base_width = 14,
+          base_width = 13,
           dpi = 300)

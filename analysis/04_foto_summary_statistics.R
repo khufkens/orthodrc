@@ -20,8 +20,7 @@ p <- ggplot(psp, aes(x=type, y=pc, fill = era)) +
         legend.position="bottom",
         text = element_text(size=20)) +
   scale_fill_manual(
-    values=c("#999999",
-              rgb(255, 173, 70, 100, maxColorValue = 255))) +
+    values=c("#1f78b4","#a6cee3")) +
   coord_flip()
 
 ggsave("manuscript/figures/foto_bplot_psp.png",

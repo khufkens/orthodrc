@@ -99,25 +99,31 @@ spatial_map <- ggplot()+
   theme(legend.title = element_blank(),
         legend.position="bottom",
         legend.direction="horizontal",
-        legend.text = element_text(size = 8),
+        legend.text = element_text(size = 13),
         axis.text = element_text(size = 13),
         axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.y = element_blank(),
         panel.grid.major = element_line(colour="grey"),
         panel.grid.minor = element_line(colour="grey")) +
   labs(
     x = "",
     y = "")
 
-p <- plot_grid(geoeye_map,
-               spatial_map,
+fig <- plot_grid(geoeye_map,
+               spatial_map + theme(legend.position = "none"),
                nrow = 1,
                align = "hv",
                axis= "tblr",
                labels = c("A", "B"),
                label_x = 0)
 
+p <- plot_grid(fig,
+               get_legend(spatial_map),
+               nrow = 2,
+               rel_heights = c(1, .1))
+
 save_plot("./manuscript/figures/visual_comparison_classifiers.png",
           p,
           base_width = 13,
-          base_height = 6,
+          base_height = 8,
           dpi = 350)

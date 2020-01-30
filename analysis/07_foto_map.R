@@ -143,10 +143,11 @@ geoeye_foto_map <- ggplot()+
     x = "",
     y = "")
 
-p <- plot_grid(historical_map,
-               historical_foto_map,
+p <- plot_grid(historical_map + theme(axis.text.x = element_blank()),
+               historical_foto_map + theme(axis.text.x = element_blank(),
+                                           axis.text.y = element_blank()),
                geoeye_map,
-               geoeye_foto_map,
+               geoeye_foto_map  + theme(axis.text.y = element_blank()),
                nrow = 2,
                align = "hv",
                axis= "tblr",
@@ -213,7 +214,7 @@ geoeye_map <- ggplot()+
     y = "")
 
 p <- plot_grid(historical_map,
-               geoeye_map,
+               geoeye_map + theme(axis.text.y = element_blank()),
                ncol = 2,
                align = "hv",
                axis= "tblr",
