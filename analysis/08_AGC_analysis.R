@@ -14,7 +14,8 @@ agc <- psp %>%
   group_by(type) %>%
   summarize(mean = mean(above.ground.C.stock..Mg.C.ha.1.),
             median = median(above.ground.C.stock..Mg.C.ha.1.),
-            sd = sd(above.ground.C.stock..Mg.C.ha.1.))
+            sd = sd(above.ground.C.stock..Mg.C.ha.1.),
+            n = length(above.ground.C.stock..Mg.C.ha.1.))
 
 # test if the two plot sets (edge and mixed) come from
 # significantly different populations or not
@@ -55,13 +56,22 @@ change_stats <- rbind(change_stats,c(5,freq(edge_values)[2,2]))
 change_stats$sq_km <- change_stats$count * 0.03^2
 change_stats$ha <- change_stats$sq_km / 0.01
 
+mean_mixed_agc <- agc$mean[agc$type=="mixed"]
+sd_mixed_agc <- agc$sd[agc$type=="mixed"]
+
+print(paste(mean_mixed_agc, sd_mixed_agc, sep = " +_ "))
+
 agc_high <-
   round(change_stats$ha * agc$mean[agc$type=="mixed"]/1000)
+
+agc_high_sd <-
+  round(change_stats$ha * agc$sd[agc$type=="mixed"]/1000)
 
 agc_low <-
   round(change_stats$ha * agc$mean[agc$type=="old-regrowth"]/1000)
 
 change_stats$agc <- agc_high
+change_stats$agc[3:4] <- paste(agc_high[3:4], agc_high_sd[3:4], sep = " $\\pm$ ")
 change_stats$agc[2] <- paste(agc_low[2], agc_high[2], sep = " - ")
 
 change_stats <-  change_stats %>%
@@ -75,10 +85,10 @@ change_stats <- change_stats %>%
 # reshuffle rows
 change_stats <- change_stats[c(1,5,2:4),]
 
-write.table(change_stats,
-            "./data/surveys/lulcc_change_stats.csv",
-            row.names = FALSE,
-            col.names = TRUE,
-            quote = TRUE,
-            sep = ",")
+# write.table(change_stats,
+#             "./data/surveys/lulcc_change_stats.csv",
+#             row.names = FALSE,
+#             col.names = TRUE,
+#             quote = TRUE,
+#             sep = ",")
 

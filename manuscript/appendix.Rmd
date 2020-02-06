@@ -74,6 +74,21 @@ classoption: landscape
 # Appendix
 
 ```{r echo = FALSE, eval = TRUE}
+flight_data %>%
+  kable(
+    caption="Flight path meta-data for the Isangi-Stanleyville aerial survey. Data provided consists of the flight path number, cardinal direction of the flight, the image numbers, and the duration of the flight provided by the start and end time of the acquisition. Data is sourced from Appendix Figure 2 and the sensor logs recorded in the margin of acquired images (see Figure 1 main manuscript).",
+    booktabs = TRUE,
+    escape = FALSE,
+    col.names = c("path",
+                  "direction",
+                  "image \\#",
+                  "start (H:M:S)",
+                  "end (H:M:S)")
+    ) %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
+```{r echo = FALSE, eval = TRUE}
 psp %>%
   select(-c("label")) %>%
   kable(
@@ -94,16 +109,45 @@ psp %>%
 ```
 
 ```{r echo = FALSE, eval = TRUE}
-flight_data %>%
+agc <- psp %>%
+  group_by(type) %>%
+  summarize(mean_agc = mean(above.ground.C.stock..Mg.C.ha.1.),
+            sd_agc = sd(above.ground.C.stock..Mg.C.ha.1.),
+            mean_sd = mean(stem.density..ha.1.),
+            sd_sd = sd(stem.density..ha.1.),
+            mean_ba = mean(basal.area....m2.ha.1.),
+            sd_ba = sd(basal.area....m2.ha.1.),
+            n = length(above.ground.C.stock..Mg.C.ha.1.))
+
+mn_agc <- ifelse(!is.na(agc$sd_agc),
+                paste(round(agc$mean_agc,2), round(agc$sd_agc,2), sep = " $\\pm$ "),
+                round(agc$mean_agc,2))
+
+mn_sd <- ifelse(!is.na(agc$sd_sd),
+                paste(round(agc$mean_sd,2), round(agc$sd_sd,2), sep = " $\\pm$ "),
+                round(agc$mean_sd,2))
+
+mn_ba <- ifelse(!is.na(agc$sd_ba),
+                paste(round(agc$mean_ba,2), round(agc$sd_ba,2), sep = " $\\pm$ "),
+                round(agc$mean_ba,2))
+
+tb <- data.frame(type = agc$type,
+                 agc = mn_agc,
+                 sd = mn_sd,
+                 ba = mn_ba,
+                 n = agc$n)
+
+tb %>%
   kable(
-    caption="Flight path meta-data for the Isangi-Stanleyville aerial survey. Data provided consists of the flight path number, cardinal direction of the flight, the image numbers, and the duration of the flight provided by the start and end time of the acquisition. Data is sourced from Appendix Figure 2 and the sensor logs recorded in the margin of acquired images (see Figure 1 main manuscript).",
+    caption="Summary statistics for different forest plot types. We report the mean and standard deviation for Above Ground Carbon (AGC), basal area, stem density values and number of plots (as mentioned in Appendix Table 1).",
     booktabs = TRUE,
     escape = FALSE,
-    col.names = c("path",
-                  "direction",
-                  "image \\#",
-                  "start (H:M:S)",
-                  "end (H:M:S)")
+     col.names = c("forest type",
+                   "AGC (Mg C $ha\\textsuperscript{-1}$)",
+                   "stem density ($ha\\textsuperscript{-1}$)",
+                   "basal area ($m\\textsuperscript{2}$ $ha\\textsuperscript{-1}$)",
+                   "nr. plots"
+                   )
     ) %>%
   kable_styling(latex_options = c("hold_position"))
 ```
