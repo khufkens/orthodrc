@@ -121,19 +121,19 @@ tropical forest surrounding Yangambi (DR Congo), in the central Congo
 Basin. Our study leveraged Structure-from-Motion and a Convolutional
 Neural Network based LULC classifier, using synthetic landscapes based
 image augmentation, to map historical forest cover across a large
-orthomosaic (\textasciitilde{}82 800 ha) geo-referenced to
-\textasciitilde{}4.7 \(\pm\) 4.3 m at sub meter resolution. A comparison
-with contemporary LULC data showed a shift from previously highly
-regular industrial deforestation of large areas, to discrete smallholder
-farming clearing, increasing landscape fragmentation but also providing
-opportunties for substantial forest regrowth. We estimated above ground
-carbon gains through reforestation to range from 811 to 1592 Gg C,
-partially offseting historical deforestation (2416 Gg C), in our study
-area. Efforts to quantify long term canopy texture changes and their
-link to above ground carbon had limited to no success. Our analysis
-provides methods and insights into key spatial and temporal patterns of
-deforestation and reforestation at a multi-decadal scale, providing a
-historical context for past and ongoing forest research in the area.}
+orthomosaic (93 431 ha) geo-referenced to \textasciitilde{}4.7 \(\pm\)
+4.3 m at sub meter resolution. A comparison with contemporary LULC data
+showed a shift from previously highly regular industrial deforestation
+of large areas, to discrete smallholder farming clearing, increasing
+landscape fragmentation but also providing opportunties for substantial
+forest regrowth. We estimated above ground carbon gains through
+reforestation to range from 811 to 1592 Gg C, partially offseting
+historical deforestation (2416 Gg C), in our study area. Efforts to
+quantify long term canopy texture changes and their link to above ground
+carbon had limited to no success. Our analysis provides methods and
+insights into key spatial and temporal patterns of deforestation and
+reforestation at a multi-decadal scale, providing a historical context
+for past and ongoing forest research in the area.}
 
 % Keywords
 \keyword{Aerial survey, data recovery, CNN, Deep Learning, SfM, Congo Basin}
@@ -629,16 +629,16 @@ within the Congo Basin. The use of high resolution historical images
 combined with SfM image processing techniques allowed us to mosaic old
 imagery across a large extent. The final orthomosaic composition of the
 Yangambi region provided an image scene covering approximately 733
-million pixels across \textasciitilde{}82 800 ha with a resolution of
-0.88 m / pixel (or \textasciitilde{}23x36 km, Figure 2). The overall
-spatial accuracy of the SfM orthomosaic composition using the sparse
-cloud DEM (with a resolution of 45.8 m/pixel) was limited to
-approximately 23 m. Further georeferencing outside the SfM workflow
-reduced the mean error at the ground control points to 5.3 \(\pm\) 4.9
-px (\textasciitilde{}4.7 \(\pm\) 4.3 m), with a median error of 2.9 px
-(2.6 m). The orthomosaic served as input for all subsequent LULCC
-analysis with all derived maps provided with the manuscript repository
-(see data \& code availability statements below).
+million pixels across 93 431 ha with a resolution of 0.88 m / pixel (or
+\textasciitilde{}23x36 km, Figure 2). The overall spatial accuracy of
+the SfM orthomosaic composition using the sparse cloud DEM (with a
+resolution of 45.8 m/pixel) was limited to approximately 23 m. Further
+georeferencing outside the SfM workflow reduced the mean error at the
+ground control points to 5.3 \(\pm\) 4.9 px (\textasciitilde{}4.7
+\(\pm\) 4.3 m), with a median error of 2.9 px (2.6 m). The orthomosaic
+served as input for all subsequent LULCC analysis with all derived maps
+provided with the manuscript repository (see data \& code availability
+statements below).
 
 \begin{figure}
 
@@ -762,12 +762,13 @@ loss of \textasciitilde{}2416 \(\pm\) 358 Gg C in AGC stocks.
 \cmidrule(l{3pt}r{3pt}){3-3}
   & ha & Gg C\\
 \midrule
+Total scene area & 93431 & \\
 Non-forest cover (1958) & 16200 & \\
 Forest cover & 68455 & \\
 -  of which forest edges & 13151 & \\
 reforestation >1958 & 9918 & 811 - 1592\\
-deforestation >2000 & 8776 & 1408 $\pm$ 209\\
 \addlinespace
+deforestation >2000 & 8776 & 1408 $\pm$ 209\\
 deforestation >1958 (permanent) & 6282 & 1008 $\pm$ 150\\
 \bottomrule
 \end{tabular}

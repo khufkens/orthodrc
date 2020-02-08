@@ -56,6 +56,10 @@ change_stats <- rbind(change_stats,c(5,freq(edge_values)[2,2]))
 change_stats$sq_km <- change_stats$count * 0.03^2
 change_stats$ha <- change_stats$sq_km / 0.01
 
+# calcualte absolute surface area of the scene
+# not approximation
+total_ha_scene <- round(sum(change_stats$ha[1:4]))
+
 mean_mixed_agc <- agc$mean[agc$type=="mixed"]
 sd_mixed_agc <- agc$sd[agc$type=="mixed"]
 
@@ -84,11 +88,12 @@ change_stats <- change_stats %>%
 
 # reshuffle rows
 change_stats <- change_stats[c(1,5,2:4),]
+#change_stats <- rbind(as.numeric(c(NA, total_ha_scene, NA)), change_stats)
 
-# write.table(change_stats,
-#             "./data/surveys/lulcc_change_stats.csv",
-#             row.names = FALSE,
-#             col.names = TRUE,
-#             quote = TRUE,
-#             sep = ",")
+write.table(change_stats,
+            "./data/surveys/lulcc_change_stats.csv",
+            row.names = FALSE,
+            col.names = TRUE,
+            quote = TRUE,
+            sep = ",")
 
