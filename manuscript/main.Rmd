@@ -426,7 +426,7 @@ Changes in both land-use and land-cover led to concomitant changes in AGC stocks
 
 ```{r echo = FALSE, eval = TRUE}
 change_stats %>%
-  kable(caption="Land use land cover change statistics of forest cover around Yangambi in the central Congo Basin. The data evaluates a difference between a historical (1958) aerial photography based survey and the Hansen et al. 2013 based satellite remote sensing data. Spatial coverage statistics are provided hectares (ha), rounded to the nearest integer as well as Above Ground Carbon (AGC) scaled using recent survey measurements.",
+  kable(caption="Land use land cover change statistics of forest cover around Yangambi in the central Congo Basin. The data evaluates a difference between a historical (1958) aerial photography based survey and the Hansen et al. 2013 based satellite remote sensing data. Spatial coverage statistics are provided hectares (ha), rounded to the nearest integer as well as Above Ground Carbon (AGC) scaled using recent survey measurements. Both non-forest cover in 1958 and the forest edge area are subsets of the original data (see Figure 6) and do not count toward the total scene area.",
        booktabs = TRUE,
        digits = 3,
        row.names = TRUE,
