@@ -3,7 +3,7 @@
 Please cite code, data and the manuscript as:
 
 [Hufkens et al. 2020. Historical aerial surveys map long-term changes of
-forest cover and structure in the central Congo Basin. Remote Sensing, 12, 638.](https://www.mdpi.com/2072-4292/12/4/6380)
+forest cover and structure in the central Congo Basin. Remote Sensing, 12, 638.](https://www.mdpi.com/2072-4292/12/4/638)
 
 For full details on the methodology and results I refer to the above manuscript folder. To explore the data interactively and read the manuscript I refer to the [the repository website](https://khufkens.github.io/orthodrc/). All code is licensed under a AGPL-v3 open license, while the manuscript and data is licensed as CC-BY. Consult the individual directories and their LICENSE file. Please be mindful of the license restrictions, as they will be enforced.
 
